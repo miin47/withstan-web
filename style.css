@@ -282,7 +282,7 @@ main {
 }
 .section-4-img-2 .img-4 {
   width: 360px;
-  height: 280px;
+  height: 311px;
 }
 
 /* section-5 */
@@ -304,8 +304,8 @@ main {
 }
 
 .qr-content {
-  padding: 60px;
-  background-color: #eeeeee;
+  /* padding: 60px; */
+  /* background-color: #eeeeee; */
   display: flex;
   align-items: center;
   margin-top: 100px;
@@ -314,7 +314,11 @@ main {
   text-align: center;
   border-radius: 10px;
 }
-
+.qr-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
 .qr-text {
   font-size: 30px;
   color: #4e463e;
