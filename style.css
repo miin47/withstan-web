@@ -59,12 +59,23 @@ header {
   width: 116px;
 }
 
-header ul {
+header nav ul {
   display: flex;
   justify-content: space-between;
   font-size: 16px;
   gap: 58px;
   font-weight: 700;
+}
+
+header nav ul li a {
+  color: rgba(97, 96, 92, 1);
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: rgba(78, 70, 62, 1);
+  font-weight: 800;
 }
 
 header h1 {
