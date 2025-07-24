@@ -18,9 +18,6 @@ const headerComponent = `
 const footerComponent = `
 <footer>
   <div class="footer-container">
-    <div class="footer-logo-img">
-      <img src="./images/footer-logo.png" alt="" />
-    </div>
     <div class="footer-text">
       <span>위드스탠</span>
       <span>대표: 현승환</span>
