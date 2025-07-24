@@ -43,7 +43,7 @@ section {
 /* utility class END */
 /* header 영역 */
 header {
-  background-color: rgba(246, 237, 173, 1);
+  background-color: rgb(255, 255, 255, 1);
   height: 70px;
 }
 
@@ -51,7 +51,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 0;
+  height: 100%;
+  padding: 0;
 }
 
 .header-logo {
@@ -63,16 +64,23 @@ header nav ul {
   display: flex;
   justify-content: space-between;
   font-size: 16px;
-  gap: 58px;
-  font-weight: 700;
+  gap: 20px;
+  font-weight: 800;
 }
 
 header nav ul li a {
-  color: rgba(97, 96, 92, 1);
-  transition: color 0.3s ease;
+  color: rgba(97, 96, 92, 0.8);
+  font-weight: 800;
+  padding: 15px 30px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
-header nav ul li a:hover,
+header nav ul li a:hover {
+  color: rgba(78, 70, 62, 1);
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
 header nav ul li a.active {
   color: rgba(78, 70, 62, 1);
   font-weight: 800;
@@ -90,7 +98,7 @@ main {
   align-items: center;
 
   /* height: 520px; */
-  background: linear-gradient(rgba(246, 237, 173, 1), rgba(255, 255, 255, 1));
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(246, 237, 173, 1));
 }
 
 .main-container {
@@ -151,22 +159,17 @@ main {
   font-weight: 600;
 }
 
-.section {
+.section-1 {
   height: 320px;
   padding: 0px;
-}
-/* section-1 영역 */
-.section-1 {
   position: relative;
-  height: 100%;
+  background-color: rgba(246, 237, 173, 1);
 }
 .section-1 > div {
   display: flex;
   align-items: center;
-  gap: 24px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  justify-content: flex-end;
+  gap: 48px;
 }
 .section-img {
   width: 240px;
@@ -314,7 +317,6 @@ main {
   justify-content: center;
   align-items: center;
   padding: 150px;
-  background: linear-gradient(rgba(255, 255, 255, 1), rgba(246, 237, 173, 1));
 }
 .section-5-container {
   max-width: 996px;
