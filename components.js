@@ -3,7 +3,7 @@ const headerComponent = `
 <header>
   <div class="header-content width">
     <div class="header-logo">
-      <img src="./images/logo.png" alt="logo" />
+      <img src="./images/common/logo.png" alt="logo" />
     </div>
     <nav>
       <ul>
