@@ -83,6 +83,94 @@ header nav ul li a:hover {
 
 header nav ul li a.active {
   color: rgba(78, 70, 62, 1);
+}
+
+/* 드롭다운이 hover 상태일 때 서비스 탭도 hover 상태 유지 */
+.dropdown:hover > a {
+  color: rgba(78, 70, 62, 1);
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+/* 드롭다운 메뉴 스타일 */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background-color: rgb(255, 255, 255, 1);
+  padding: 40px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 드롭다운 활성화 시 메인 콘텐츠 블러 처리 */
+body.dropdown-active main,
+body.dropdown-active section {
+  filter: blur(5px);
+  transition: filter 0.4s ease;
+}
+
+/* 일반 상태에서는 블러 없음 */
+main,
+section {
+  filter: none;
+  transition: filter 0.4s ease;
+}
+
+.dropdown-menu .menu-container {
+  max-width: 996px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.dropdown-menu .menu-item {
+  display: block;
+}
+
+.dropdown-menu .menu-item a {
+  display: block;
+  padding: 20px 30px;
+  font-size: 16px;
+  font-weight: 800;
+  color: rgba(97, 96, 92, 0.8);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 140px;
+}
+
+.dropdown-menu .menu-item a:hover {
+  background-color: rgba(240, 240, 240, 0.8);
+  color: rgba(78, 70, 62, 1);
+  transform: translateY(-2px);
+}
+
+.dropdown-menu .menu-item a.active {
+  color: rgba(78, 70, 62, 1);
+}
+
+/* 서비스 탭과 드롭다운 아이템이 active일 때 */
+.dropdown.active > a,
+.dropdown > a.active {
+  color: rgba(78, 70, 62, 1);
   font-weight: 800;
 }
 

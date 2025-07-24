@@ -8,6 +8,19 @@ const headerComponent = `
     <nav>
       <ul>
         <li><a href="index.html" id="nav-company">회사 소개</a></li>
+        <li class="dropdown">
+          <a href="#" id="nav-services">서비스</a>
+          <div class="dropdown-menu">
+            <div class="menu-container">
+              <div class="menu-item">
+                <a href="duckmate.html" id="nav-duckmate">DuckMate</a>
+              </div>
+              <div class="menu-item">
+                <a href="mercado-seguro.html" id="nav-mercado-seguro">Mercado Seguro</a>
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
   </div>
@@ -55,13 +68,44 @@ function setActiveNavigation(activeId) {
   document.querySelectorAll("nav ul li a").forEach((link) => {
     link.classList.remove("active");
   });
+  document.querySelectorAll("nav ul li").forEach((li) => {
+    li.classList.remove("active");
+  });
 
   // 해당 페이지의 네비게이션에 active 클래스 추가
   const activeLink = document.getElementById(activeId);
   if (activeLink) {
     activeLink.classList.add("active");
+
+    // 드롭다운 메뉴 아이템인 경우 부모 서비스 탭도 active로 설정
+    if (activeId === "nav-duckmate" || activeId === "nav-mercado-seguro") {
+      const servicesTab = document.getElementById("nav-services");
+      const servicesParent = servicesTab?.parentElement;
+      if (servicesTab && servicesParent) {
+        servicesTab.classList.add("active");
+        servicesParent.classList.add("active");
+      }
+    }
   }
 }
 
-// DOM 로드 완료 시 컴포넌트 로드
-document.addEventListener("DOMContentLoaded", loadComponents);
+// 드롭다운 블러 효과를 위한 이벤트 리스너
+function setupDropdownBlur() {
+  const dropdown = document.querySelector(".dropdown");
+  if (dropdown) {
+    dropdown.addEventListener("mouseenter", () => {
+      document.body.classList.add("dropdown-active");
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      document.body.classList.remove("dropdown-active");
+    });
+  }
+}
+
+// DOM 로드 완료 시 컴포넌트 로드 및 이벤트 설정
+document.addEventListener("DOMContentLoaded", function () {
+  loadComponents();
+  // 컴포넌트 로드 후 이벤트 설정
+  setTimeout(setupDropdownBlur, 10);
+});
