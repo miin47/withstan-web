@@ -4,7 +4,7 @@ const headerComponent = `
   <div class="header-content width">
     <div class="header-logo">
       <a href="#" id="logo-link">
-        <img src="./images/common/logo.png" alt="logo" />
+        <img src="./images/withstan/logo.png" alt="withstan-logo" />
       </a>
     </div>
     <nav>
