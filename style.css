@@ -182,7 +182,7 @@ header h1 {
 main {
   position: relative;
   /* height: calc(70dvh - 70px); */
-  padding: 160px 0 240px 0;
+  padding: 160px 0;
   align-items: center;
 
   /* height: 520px; */
@@ -219,7 +219,8 @@ main {
 }
 
 .main-logo img {
-  width: 250px;
+  height: 150px;
+  margin-left: 18px;
 }
 
 .contact-contentbox {
@@ -230,8 +231,8 @@ main {
 
 .contact-contentbox a:nth-child(1) {
   padding: 8px 40px;
-  background-color: rgba(249, 190, 0, 1);
   border-radius: 30px;
+  /* background-color: #444; */
   color: rgba(255, 255, 255, 1);
   font-size: 18px;
   line-height: 1.5;
@@ -247,11 +248,74 @@ main {
   font-weight: 600;
 }
 
+.contact-contentbox a:nth-child(3) {
+  padding: 8px 35px;
+  background-color: #d5d5d5;
+  border-radius: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.section-mese {
+  padding: 100px 0;
+  height: 440px;
+  position: relative;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.bg-mese-accent {
+  background-color: #73c899;
+}
+
+.bg-gray {
+  background-color: #f8f9fa;
+}
+
+.section-right {
+  width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 48px;
+}
+.section-text-right {
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: right;
+  margin-bottom: 30px;
+}
+.section-left {
+  width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 48px;
+}
+.section-text-left {
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.section-center {
+  width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
 .section-1 {
   height: 320px;
   padding: 0px;
   position: relative;
   background-color: rgba(246, 237, 173, 1);
+  z-index: 1;
 }
 .section-1 > div {
   display: flex;
@@ -262,6 +326,7 @@ main {
 .section-img {
   width: 240px;
   height: 320px;
+  z-index: 1;
 }
 .section-text-1 {
   font-size: 24px;
@@ -281,6 +346,7 @@ main {
 .section-2 {
   background-color: rgba(153, 115, 233, 1);
   text-align: center;
+  z-index: 100;
 }
 .section-2 > .width {
   min-height: 100%;
@@ -500,6 +566,22 @@ footer {
   );
 }
 
+.main-mese {
+  background: linear-gradient(rgba(255, 255, 255, 1), #73c899);
+}
+
+.mese-section-2 {
+  background-color: #abdec2;
+  position: relative;
+  z-index: 100;
+}
+.mese-accent {
+  background-color: #0c964a;
+}
+.duckmate-accent {
+  background-color: rgba(249, 190, 0, 1);
+}
+
 main h1 {
   font-size: 48px;
   font-weight: 800;
@@ -527,7 +609,7 @@ main h2 {
 }
 
 .mission-points .check {
-  color: #4caf50;
+  color: #01afec;
   font-weight: 800;
   margin-right: 12px;
   font-size: 20px;
@@ -652,7 +734,7 @@ main h2 {
 }
 
 .execution-intro .check {
-  color: #4caf50;
+  color: #01afec;
   font-weight: 800;
   margin-right: 12px;
   font-size: 24px;
