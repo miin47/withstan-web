@@ -3,7 +3,9 @@ const headerComponent = `
 <header>
   <div class="header-content width">
     <div class="header-logo">
-      <img src="./images/common/logo.png" alt="logo" />
+      <a href="#" id="logo-link">
+        <img src="./images/common/logo.png" alt="logo" />
+      </a>
     </div>
     <nav>
       <ul>
@@ -103,9 +105,38 @@ function setupDropdownBlur() {
   }
 }
 
+// 로고 클릭 이벤트 설정
+function setupLogoClick() {
+  const logoLink = document.getElementById("logo-link");
+  if (logoLink) {
+    logoLink.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // 현재 페이지가 index.html인지 확인
+      const currentPath = window.location.pathname;
+      const isIndexPage =
+        currentPath.endsWith("index.html") ||
+        currentPath === "/" ||
+        currentPath === "";
+
+      if (isIndexPage) {
+        // index 페이지라면 맨 위로 스크롤
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      } else {
+        // 다른 페이지라면 index로 이동
+        window.location.href = "index.html";
+      }
+    });
+  }
+}
+
 // DOM 로드 완료 시 컴포넌트 로드 및 이벤트 설정
 document.addEventListener("DOMContentLoaded", function () {
   loadComponents();
   // 컴포넌트 로드 후 이벤트 설정
   setTimeout(setupDropdownBlur, 10);
+  setTimeout(setupLogoClick, 10);
 });

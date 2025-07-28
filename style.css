@@ -45,6 +45,12 @@ section {
 header {
   background-color: rgb(255, 255, 255, 1);
   height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
 .header-content {
@@ -182,11 +188,14 @@ header h1 {
 main {
   position: relative;
   /* height: calc(70dvh - 70px); */
-  padding: 160px 0;
+  padding: 230px 0 160px 0;
   align-items: center;
 
   /* height: 520px; */
-  background: linear-gradient(rgba(255, 255, 255, 1), rgba(246, 237, 173, 1));
+  background: linear-gradient(
+    rgba(255, 255, 255, 1) 15%,
+    rgba(246, 237, 173, 1)
+  );
 }
 
 .main-container {
@@ -561,13 +570,13 @@ footer {
 /* 1. 히어로 섹션 */
 .main-company {
   background: linear-gradient(
-    rgba(255, 255, 255, 1) 5%,
+    rgba(255, 255, 255, 1) 15%,
     rgba(1, 175, 236, 0.7)
   );
 }
 
 .main-mese {
-  background: linear-gradient(rgba(255, 255, 255, 1), #73c899);
+  background: linear-gradient(rgba(255, 255, 255, 1) 15%, #73c899);
 }
 
 .mese-section-2 {
