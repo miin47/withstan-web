@@ -38,7 +38,7 @@ const footerComponent = `
       <span>이메일: ke8354@gmail.com</span>
     </div>
     <div class="footer-text footer-text-2">
-      <span>서울특별시 강동구 올림픽로 610, B동 2층 2호(05385)</span>
+      <span>서울특별시 종로구 동숭길 112-6, 3층 306호(03084)</span>
     </div>
     <div class="footer-text footer-text-3">
       <span>COPYRIGHT 2024 withstan. ALL RESERVED</span>
