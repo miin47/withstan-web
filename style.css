@@ -216,11 +216,14 @@ main {
   font-size: 18px;
   line-height: 1.5;
 }
-
+.main-container h1 {
+  color: rgb(0, 0, 0);
+}
 .main-container h2 {
   font-size: 26px;
   line-height: 1.5;
   margin-top: 12px;
+  color: rgb(0, 0, 0);
 }
 
 .main-logo {
@@ -231,7 +234,13 @@ main {
   height: 150px;
   margin-left: 18px;
 }
+.company-logo {
+  margin-bottom: 32px;
+}
 
+.company-logo img {
+  height: 80px;
+}
 .contact-contentbox {
   display: flex;
   gap: 30px;
@@ -320,17 +329,17 @@ main {
   gap: 24px;
 }
 .section-1 {
-  height: 320px;
-  padding: 0px;
   position: relative;
-  background-color: rgba(246, 237, 173, 1);
   z-index: 1;
+  padding: 120px 0;
+  height: 100%;
 }
 .section-1 > div {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: flex-end;
-  gap: 48px;
+  gap: 20px;
 }
 .section-img {
   width: 240px;
@@ -496,7 +505,6 @@ main {
   /* background-color: #eeeeee; */
   display: flex;
   align-items: center;
-  margin-top: 100px;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
@@ -842,4 +850,103 @@ main h2 {
 
 .app-link:hover {
   background-color: #0199d3;
+}
+
+/* 덕메이트 페이지 스타일 - index.html 디자인 참고 */
+
+/* 덕메이트 섹션 제목 공통 스타일 */
+.duckmate-problems .section-title,
+.duckmate-intro .section-title,
+.duckmate-services .section-title,
+.duckmate-start .section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgba(78, 70, 62, 1);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* 문제점 섹션 (section-1) - section-tech 스타일 참고 */
+.duckmate-problems {
+  background-color: #f8f9fa;
+}
+
+.section-list {
+  max-width: 800px;
+}
+
+.section-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.section-item .bullet {
+  color: rgba(78, 70, 62, 1);
+  font-weight: 800;
+  margin-right: 12px;
+  margin-top: 2px;
+}
+
+/* 소개 섹션 (section-2) - section-tech 스타일과 유사하게 */
+.duckmate-intro {
+  padding: 160px 0;
+  height: 100%;
+  background-color: white;
+}
+
+.intro-features {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.intro-highlight {
+  background-color: white;
+  border-left: 4px solid rgba(249, 190, 0, 1);
+  padding: 30px;
+  margin: 40px auto 0 auto;
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(78, 70, 62, 1);
+  font-style: italic;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.intro-highlight .highlight {
+  color: rgba(249, 190, 0, 1);
+  font-weight: 800;
+}
+
+/* 서비스 구조 섹션 (section-3) */
+.duckmate-services {
+  background-color: #f8f9fa;
+}
+
+.services-features {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+/* 시작하기 섹션 (section-4) - section-execution 스타일 참고 */
+.duckmate-start {
+  background-color: white;
+}
+
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.qr-description {
+  font-size: 18px;
+  color: rgba(97, 96, 92, 1);
+  font-weight: 600;
 }
