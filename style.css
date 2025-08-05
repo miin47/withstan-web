@@ -766,7 +766,7 @@ main h2 {
 
 .table-header {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: rgba(78, 70, 62, 1);
   color: white;
   font-weight: 700;
@@ -780,7 +780,7 @@ main h2 {
 
 .table-row {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   border-bottom: 1px solid #eee;
 }
 
