@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dear Us - Account Deletion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --coral: #FF6B9D;
+      --coral-light: #FFB5D0;
+      --lavender: #A78BFA;
+      --lavender-light: #E0D4FF;
+      --bg: #FFFBF7;
+      --text: #2D2D2D;
+      --text-light: #6B6B6B;
+      --border: #F0E6DC;
+      --shadow: rgba(255, 107, 157, 0.1);
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 150%;
+      background: radial-gradient(circle, var(--coral-light) 0%, transparent 70%);
+      opacity: 0.15;
+      z-index: -1;
+      animation: float 20s ease-in-out infinite;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      bottom: -30%;
+      left: -10%;
+      width: 60%;
+      height: 100%;
+      background: radial-gradient(circle, var(--lavender-light) 0%, transparent 70%);
+      opacity: 0.12;
+      z-index: -1;
+      animation: float 25s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      50% {
+        transform: translate(-30px, 30px) rotate(5deg);
+      }
+    }
+
+    .lang-toggle {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      z-index: 1000;
+      background: white;
+      border-radius: 50px;
+      padding: 0.5rem;
+      box-shadow: 0 4px 20px var(--shadow);
+      display: flex;
+      gap: 0.3rem;
+      animation: fadeIn 0.8s ease-out 0.4s backwards;
+    }
+
+    .lang-btn {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      background: transparent;
+      color: var(--text-light);
+      font-weight: 500;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .lang-btn.active {
+      background: linear-gradient(135deg, var(--coral) 0%, var(--lavender) 100%);
+      color: white;
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    .lang-btn:hover:not(.active) {
+      color: var(--coral);
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--text);
+      text-align: center;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+      animation: fadeInUp 0.8s ease-out;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section {
+      background: white;
+      border-radius: 24px;
+      padding: 3rem;
+      margin: 2rem 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+      border: 1px solid var(--border);
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+
+    h2 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--coral);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .step-list {
+      list-style: none;
+      counter-reset: step-counter;
+    }
+
+    .step-list li {
+      counter-increment: step-counter;
+      position: relative;
+      padding: 1.5rem 0 1.5rem 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step-list li:last-child {
+      border-bottom: none;
+    }
+
+    .step-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 1.2rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: linear-gradient(135deg, var(--coral) 0%, var(--lavender) 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .step-list li strong {
+      color: var(--coral);
+      font-weight: 600;
+    }
+
+    .contact-section {
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .contact-section p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .email-link {
+      display: inline-block;
+      color: var(--coral);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 0.8rem 2rem;
+      background: var(--bg);
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      border: 2px solid var(--coral);
+    }
+
+    .email-link:hover {
+      background: linear-gradient(135deg, var(--coral) 0%, var(--lavender) 100%);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px var(--shadow);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .lang-toggle {
+        top: 1rem;
+        right: 1rem;
+        flex-wrap: wrap;
+        max-width: calc(100vw - 2rem);
+      }
+
+      .lang-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+
+      .container {
+        padding: 2rem 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .section {
+        padding: 2rem 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .step-list li {
+        padding-left: 3.5rem;
+      }
+
+      .step-list li::before {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.95rem;
+        top: 1.3rem;
+      }
+
+      .email-link {
+        font-size: 1rem;
+        padding: 0.7rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLanguage('ko')">한국어</button>
+    <button class="lang-btn" onclick="switchLanguage('en')">English</button>
+    <button class="lang-btn" onclick="switchLanguage('es')">Español</button>
+    <button class="lang-btn" onclick="switchLanguage('pt')">Português</button>
+  </div>
+
+  <!-- Korean Content -->
+  <div id="content-ko" class="container">
+    <h1>계정 삭제하기</h1>
+
+    <div class="section">
+      <h2>앱에서 삭제하기</h2>
+      <ol class="step-list">
+        <li>로그인 상태에서 <strong>'마이'</strong> 탭을 선택해주세요.</li>
+        <li>마이 화면에서 우측 상단의 <strong>'설정'</strong> 버튼을 눌러주세요.</li>
+        <li><strong>'탈퇴'</strong> 버튼을 눌러주세요.</li>
+        <li>주의 문구를 확인하고 확인 버튼을 눌러주세요.</li>
+      </ol>
+    </div>
+
+    <div class="section contact-section">
+      <h2>탈퇴 요청 메일 보내기</h2>
+      <p>회원 정보에 등록된 이메일 계정을 통해 다음 이메일 주소로 탈퇴 요청 메일을 보내주세요.</p>
+      <a href="mailto:dev@with-stan.com" class="email-link">dev@with-stan.com</a>
+    </div>
+  </div>
+
+  <!-- English Content -->
+  <div id="content-en" class="container hidden">
+    <h1>Delete Account</h1>
+
+    <div class="section">
+      <h2>Delete in App</h2>
+      <ol class="step-list">
+        <li>While logged in, select the <strong>'My'</strong> tab.</li>
+        <li>On the My screen, tap the <strong>'Settings'</strong> button in the upper right corner.</li>
+        <li>Tap the <strong>'Delete'</strong> button.</li>
+        <li>Review the warning message and confirm by tapping the confirm button.</li>
+      </ol>
+    </div>
+
+    <div class="section contact-section">
+      <h2>Send Deletion Request Email</h2>
+      <p>Please send a deletion request email to the following address using the email account registered in your member
+        information.</p>
+      <a href="mailto:dev@with-stan.com" class="email-link">dev@with-stan.com</a>
+    </div>
+  </div>
+
+  <!-- Spanish Content -->
+  <div id="content-es" class="container hidden">
+    <h1>Eliminar Cuenta</h1>
+
+    <div class="section">
+      <h2>Eliminar en la App</h2>
+      <ol class="step-list">
+        <li>Mientras esté conectado, seleccione la pestaña <strong>'Mi'</strong>.</li>
+        <li>En la pantalla Mi, toque el botón de <strong>'Configuración'</strong> en la esquina superior derecha.</li>
+        <li>Toque el botón <strong>'Eliminar'</strong>.</li>
+        <li>Revise el mensaje de advertencia y confirme tocando el botón de confirmar.</li>
+      </ol>
+    </div>
+
+    <div class="section contact-section">
+      <h2>Enviar Correo de Solicitud de Eliminación</h2>
+      <p>Por favor, envíe un correo de solicitud de eliminación a la siguiente dirección usando la cuenta de correo
+        registrada en su información de miembro.</p>
+      <a href="mailto:dev@with-stan.com" class="email-link">dev@with-stan.com</a>
+    </div>
+  </div>
+
+  <!-- Portuguese Content -->
+  <div id="content-pt" class="container hidden">
+    <h1>Excluir Conta</h1>
+
+    <div class="section">
+      <h2>Excluir no App</h2>
+      <ol class="step-list">
+        <li>Enquanto estiver conectado, selecione a aba <strong>'Meu'</strong>.</li>
+        <li>Na tela Meu, toque no botão de <strong>'Configurações'</strong> no canto superior direito.</li>
+        <li>Toque no botão <strong>'Excluir'</strong>.</li>
+        <li>Revise a mensagem de aviso e confirme tocando no botão de confirmar.</li>
+      </ol>
+    </div>
+
+    <div class="section contact-section">
+      <h2>Enviar E-mail de Solicitação de Exclusão</h2>
+      <p>Por favor, envie um e-mail de solicitação de exclusão para o seguinte endereço usando a conta de e-mail
+        registrada em suas informações de membro.</p>
+      <a href="mailto:dev@with-stan.com" class="email-link">dev@with-stan.com</a>
+    </div>
+  </div>
+
+  <footer>
+    <p><strong>Dear Us</strong> · dev@with-stan.com</p>
+  </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      // Hide all content
+      ['ko', 'en', 'es', 'pt'].forEach(l => {
+        document.getElementById(`content-${l}`).classList.add('hidden');
+      });
+
+      // Show selected content
+      document.getElementById(`content-${lang}`).classList.remove('hidden');
+
+      // Update active button
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+
+      // Update lang attribute
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+
+</html>
