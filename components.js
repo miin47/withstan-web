@@ -21,7 +21,7 @@ const headerComponent = `
                 <a href="mercadoseguro.html" id="nav-mercadoseguro">Mercado Seguro</a>
               </div>
               <div class="menu-item">
-                <a href="daerus.html" id="nav-daerus">Dear Us</a>
+                <a href="dearus.html" id="nav-dearus">Dear Us</a>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ function setActiveNavigation(activeId) {
     activeLink.classList.add("active");
 
     // 드롭다운 메뉴 아이템인 경우 부모 서비스 탭도 active로 설정
-    if (activeId === "nav-duckmate" || activeId === "nav-mercadoseguro" || activeId === "nav-daerus") {
+    if (activeId === "nav-duckmate" || activeId === "nav-mercadoseguro" || activeId === "nav-dearus") {
       const servicesTab = document.getElementById("nav-services");
       const servicesParent = servicesTab?.parentElement;
       if (servicesTab && servicesParent) {
@@ -117,10 +117,7 @@ function setupLogoClick() {
 
       // 현재 페이지가 index.html인지 확인
       const currentPath = window.location.pathname;
-      const isIndexPage =
-        currentPath.endsWith("index.html") ||
-        currentPath === "/" ||
-        currentPath === "";
+      const isIndexPage = currentPath.endsWith("index.html") || currentPath === "/" || currentPath === "";
 
       if (isIndexPage) {
         // index 페이지라면 맨 위로 스크롤

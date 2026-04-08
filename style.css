@@ -974,11 +974,11 @@ main h2 {
 }
 
 /* Dear Us 페이지 스타일 */
-.main-daerus {
+.main-dearus {
   background: linear-gradient(var(--color-white) 15%, var(--color-pink));
 }
 
-.section-daerus {
+.section-dearus {
   padding: 100px 0;
   height: 440px;
   position: relative;
@@ -987,14 +987,14 @@ main h2 {
   overflow: hidden;
 }
 
-.bg-daerus-accent {
+.bg-dearus-accent {
   background-color: var(--color-pink);
 }
 
-.bg-daerus-light {
+.bg-dearus-light {
   background-color: var(--color-pink-light);
 }
 
-.daerus-accent {
+.dearus-accent {
   background-color: var(--color-pink-dark);
 }
