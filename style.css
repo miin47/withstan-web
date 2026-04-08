@@ -121,6 +121,96 @@ header nav ul li a.active {
   color: var(--color-text);
 }
 
+/* 언어 스위처 (드롭다운) — 다른 nav 항목 위치에 영향을 주지 않도록 absolute */
+.lang-switcher {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  list-style: none;
+}
+
+.lang-switcher .lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 34px;
+  padding: 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-text);
+  background: #fff;
+  border: 1.5px solid var(--color-text, #333);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.lang-switcher .lang-toggle:hover {
+  background-color: var(--color-text, #333);
+  color: #fff;
+}
+
+.lang-switcher.open .lang-toggle {
+  background-color: var(--color-text, #333);
+  color: #fff;
+}
+
+.lang-switcher .lang-toggle:hover {
+  background-color: var(--color-gray-light);
+}
+
+.lang-switcher .lang-caret {
+  font-size: 10px;
+  line-height: 1;
+}
+
+.lang-switcher .lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 80px;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid var(--color-gray-light, #e5e5e5);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.lang-switcher.open .lang-menu {
+  display: flex;
+}
+
+.lang-switcher .lang-item {
+  display: block;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-light, #888);
+  border-radius: 6px;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.lang-switcher .lang-item:hover {
+  background-color: var(--color-gray-light);
+  color: var(--color-text);
+}
+
+.lang-switcher .lang-item.active {
+  color: var(--color-text);
+}
+
 /* 드롭다운이 hover 상태일 때 서비스 탭도 hover 상태 유지 */
 .dropdown:hover > a {
   color: var(--color-text);
