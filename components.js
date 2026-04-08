@@ -20,6 +20,9 @@ const headerComponent = `
               <div class="menu-item">
                 <a href="mercadoseguro.html" id="nav-mercadoseguro">Mercado Seguro</a>
               </div>
+              <div class="menu-item">
+                <a href="daerus.html" id="nav-daerus">Dear Us</a>
+              </div>
             </div>
           </div>
         </li>
@@ -80,7 +83,7 @@ function setActiveNavigation(activeId) {
     activeLink.classList.add("active");
 
     // 드롭다운 메뉴 아이템인 경우 부모 서비스 탭도 active로 설정
-    if (activeId === "nav-duckmate" || activeId === "nav-mercadoseguro") {
+    if (activeId === "nav-duckmate" || activeId === "nav-mercadoseguro" || activeId === "nav-daerus") {
       const servicesTab = document.getElementById("nav-services");
       const servicesParent = servicesTab?.parentElement;
       if (servicesTab && servicesParent) {

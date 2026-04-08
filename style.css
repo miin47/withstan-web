@@ -3,7 +3,7 @@
   --color-text: #3f3b37;
   --color-text-light: #61605c;
   --color-shadow: #0000001a;
-  
+
   /* 브랜드 컬러 */
   --color-white: #ffffff;
   --color-gray: #eeeeee;
@@ -14,7 +14,7 @@
   --color-blue: #01afec;
   --color-blue-hover: #0199d3;
   --color-blue-alpha: #01afecb3;
-  
+
   --color-yellow: #f9be00;
   --color-yellow-light: #f6edad;
 
@@ -23,7 +23,10 @@
   --color-green-dark: #0c964a;
 
   --color-purple: #9973e9;
-  
+
+  --color-pink: #ffc2d1;
+  --color-pink-light: #ffe0e6;
+  --color-pink-dark: #e8356f;
 }
 
 * {
@@ -216,10 +219,7 @@ main {
   /* height: calc(70dvh - 70px); */
   padding: 230px 0 160px 0;
   align-items: center;
-  background: linear-gradient(
-    var(--color-white) 15%,
-    var(--color-yellow-light)
-  );
+  background: linear-gradient(var(--color-white) 15%, var(--color-yellow-light));
 }
 
 .main-container {
@@ -312,6 +312,10 @@ main {
 
 .bg-gray {
   background-color: var(--color-gray-light);
+}
+
+.bg-white {
+  background-color: var(--color-white);
 }
 
 .section-right {
@@ -598,10 +602,7 @@ footer {
 /* 회사 소개 페이지 스타일 */
 /* 1. 히어로 섹션 */
 .main-company {
-  background: linear-gradient(
-    var(--color-white) 15%,
-    var(--color-blue-alpha)
-  );
+  background: linear-gradient(var(--color-white) 15%, var(--color-blue-alpha));
 }
 
 .main-mese {
@@ -970,4 +971,30 @@ main h2 {
   font-size: 18px;
   color: var(--color-text-light);
   font-weight: 600;
+}
+
+/* Dear Us 페이지 스타일 */
+.main-daerus {
+  background: linear-gradient(var(--color-white) 15%, var(--color-pink));
+}
+
+.section-daerus {
+  padding: 100px 0;
+  height: 440px;
+  position: relative;
+  /* background-color: var(--color-white); */
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bg-daerus-accent {
+  background-color: var(--color-pink);
+}
+
+.bg-daerus-light {
+  background-color: var(--color-pink-light);
+}
+
+.daerus-accent {
+  background-color: var(--color-pink-dark);
 }
