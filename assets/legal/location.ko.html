@@ -1,860 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="legal-doc-type" content="location">
-  <meta name="legal-doc-version" content="2.5">
-  <meta id="meta-lang" name="legal-doc-lang" content="en">
-  <meta name="legal-effective-date" content="2026-04-07">
-  <title>Dear Us — Location-Based Service Terms v2.5</title>
-  <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0
-    }
-
-    :root {
-      --bg: #fff;
-      --bg2: #f7f8fc;
-      --text: #1c1c1e;
-      --text2: #555;
-      --border: #ddd;
-      --accent: #4f46e5;
-      --link: #2563eb;
-      --lhov: #1d4ed8;
-      --cb: #fff5f5;
-      --cbr: #e53e3e;
-      --cbt: #c53030;
-      --wb: #fffbeb;
-      --wbr: #d97706;
-      --wbt: #92400e;
-      --ib: #eff6ff;
-      --ibr: #3b82f6;
-      --ibt: #1e40af;
-      --pb: #f5f3ff;
-      --pbr: #7c3aed;
-      --pbt: #5b21b6
-    }
-
-    @media(prefers-color-scheme:dark) {
-      :root {
-        --bg: #1a1a1a;
-        --bg2: #252525;
-        --text: #e0e0e0;
-        --text2: #aaa;
-        --border: #3a3a3a;
-        --accent: #818cf8;
-        --link: #93c5fd;
-        --lhov: #bfdbfe;
-        --cb: #2d1b1b;
-        --cbr: #c53030;
-        --cbt: #fc8181;
-        --wb: #2d2514;
-        --wbr: #d97706;
-        --wbt: #fcd34d;
-        --ib: #1e2a3d;
-        --ibr: #3b82f6;
-        --ibt: #93c5fd;
-        --pb: #1e1835;
-        --pbr: #7c3aed;
-        --pbt: #c4b5fd
-      }
-    }
-
-    html {
-      font-size: 16px;
-      -webkit-text-size-adjust: 100%;
-      scroll-behavior: smooth
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.75;
-      color: var(--text);
-      background: var(--bg);
-      overflow-x: hidden
-    }
-
-    #page-header {
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      position: sticky;
-      top: 0;
-      z-index: 100
-    }
-
-    .logo-text {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -.02em
-    }
-
-    .lang-sw {
-      display: flex;
-      gap: 4px;
-      flex-wrap: wrap
-    }
-
-    .lang-btn {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 4px;
-      font-size: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      color: var(--text2);
-      border: 1px solid var(--border);
-      background: var(--bg);
-      cursor: pointer;
-      transition: all .15s
-    }
-
-    .lang-btn:hover,
-    .lang-btn.active {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent)
-    }
-
-    #tr-banner {
-      background: var(--wb);
-      border-bottom: 2px solid var(--wbr);
-      padding: 10px 20px;
-      font-size: 13px;
-      color: var(--wbt)
-    }
-
-    #tr-banner p+p {
-      margin-top: 4px
-    }
-
-    main {
-      padding: 28px 20px 60px;
-      max-width: 800px;
-      margin: 0 auto
-    }
-
-    .doc-hdr {
-      margin-bottom: 28px;
-      padding-bottom: 20px;
-      border-bottom: 2px solid var(--border)
-    }
-
-    .doc-hdr h1 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 8px;
-      letter-spacing: -.02em
-    }
-
-    .doc-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 13px;
-      color: var(--text2);
-      margin-bottom: 14px
-    }
-
-    .ci-table {
-      font-size: 13px;
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 12px
-    }
-
-    .ci-table td {
-      padding: 3px 8px 3px 0;
-      vertical-align: top;
-      border: none
-    }
-
-    .ci-table td:first-child {
-      font-weight: 600;
-      color: var(--text2);
-      white-space: nowrap;
-      min-width: 110px
-    }
-
-    .toc {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 18px 22px;
-      margin-bottom: 28px
-    }
-
-    .toc h2 {
-      font-size: .8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      color: var(--text2);
-      margin-bottom: 10px
-    }
-
-    .toc ol {
-      padding-left: 20px
-    }
-
-    .toc li {
-      margin-bottom: 3px
-    }
-
-    .toc a {
-      color: var(--link);
-      text-decoration: none;
-      font-size: 14px
-    }
-
-    .toc a:hover {
-      text-decoration: underline
-    }
-
-    article {
-      margin-bottom: 44px;
-      scroll-margin-top: 76px
-    }
-
-    article h2 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 14px;
-      padding: 8px 0;
-      border-top: 2px solid var(--border)
-    }
-
-    article h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text);
-      margin: 18px 0 8px
-    }
-
-    p {
-      margin-bottom: 10px
-    }
-
-    p:last-child {
-      margin-bottom: 0
-    }
-
-    ul,
-    ol {
-      padding-left: 20px;
-      margin-bottom: 10px
-    }
-
-    li {
-      margin-bottom: 4px
-    }
-
-    .dt {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13.5px;
-      margin: 14px 0;
-      display: block;
-      overflow-x: auto
-    }
-
-    .dt th {
-      background: var(--bg2);
-      font-weight: 600;
-      text-align: left;
-      padding: 7px 10px;
-      border: 1px solid var(--border);
-      white-space: nowrap
-    }
-
-    .dt td {
-      padding: 7px 10px;
-      border: 1px solid var(--border);
-      vertical-align: top
-    }
-
-    .dt tr:nth-child(even) td {
-      background: var(--bg2)
-    }
-
-    .legal-critical,
-    .legal-warning,
-    .legal-info,
-    .legal-correction {
-      border-left: 4px solid;
-      border-radius: 4px;
-      padding: 12px 14px;
-      margin: 14px 0;
-      font-size: 14px
-    }
-
-    .legal-critical {
-      background: var(--cb);
-      border-color: var(--cbr);
-      color: var(--cbt)
-    }
-
-    .legal-warning {
-      background: var(--wb);
-      border-color: var(--wbr);
-      color: var(--wbt)
-    }
-
-    .legal-info {
-      background: var(--ib);
-      border-color: var(--ibr);
-      color: var(--ibt)
-    }
-
-    .legal-correction {
-      background: var(--pb);
-      border-color: var(--pbr);
-      color: var(--pbt)
-    }
-
-    .legal-critical h3,
-    .legal-warning h3,
-    .legal-info h3,
-    .legal-correction h3 {
-      font-size: .8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .03em;
-      margin: 0 0 8px;
-      border: none;
-      padding: 0
-    }
-
-    #page-footer {
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      padding: 28px 20px;
-      font-size: 13px;
-      color: var(--text2)
-    }
-
-    .fi {
-      max-width: 800px;
-      margin: 0 auto
-    }
-
-    .fi h3 {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 10px
-    }
-
-    .fg {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 2px 12px;
-      margin-bottom: 16px
-    }
-
-    .fg dt {
-      font-weight: 600;
-      white-space: nowrap
-    }
-
-    .fg dd {
-      color: var(--text2)
-    }
-
-    .vh {
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border);
-      font-size: 12px
-    }
-
-    body.embed-mode #page-header,
-    body.embed-mode #page-footer {
-      display: none
-    }
-
-    body.embed-mode main {
-      padding-top: 14px
-    }
-
-    .hidden {
-      display: none !important
-    }
-
-    a {
-      color: var(--link)
-    }
-
-    a:hover {
-      color: var(--lhov)
-    }
-
-    strong {
-      font-weight: 600
-    }
-
-    @media(max-width:600px) {
-      #page-header {
-        padding: 10px 14px
-      }
-
-      main {
-        padding: 18px 14px 44px
-      }
-
-      article h2 {
-        font-size: 1.05rem
-      }
-
-      .fg {
-        grid-template-columns: 1fr
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="legal-doc-type" content="location">
+<meta name="legal-doc-version" content="2.5">
+<meta id="meta-lang" name="legal-doc-lang" content="en">
+<meta name="legal-effective-date" content="2026-04-07">
+<title>Dear Us — Location-Based Service Terms v2.5</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fff;--bg2:#f7f8fc;--text:#1c1c1e;--text2:#555;--border:#ddd;--accent:#4f46e5;--link:#2563eb;--lhov:#1d4ed8;--cb:#fff5f5;--cbr:#e53e3e;--cbt:#c53030;--wb:#fffbeb;--wbr:#d97706;--wbt:#92400e;--ib:#eff6ff;--ibr:#3b82f6;--ibt:#1e40af;--pb:#f5f3ff;--pbr:#7c3aed;--pbt:#5b21b6}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1a1a;--bg2:#252525;--text:#e0e0e0;--text2:#aaa;--border:#3a3a3a;--accent:#818cf8;--link:#93c5fd;--lhov:#bfdbfe;--cb:#2d1b1b;--cbr:#c53030;--cbt:#fc8181;--wb:#2d2514;--wbr:#d97706;--wbt:#fcd34d;--ib:#1e2a3d;--ibr:#3b82f6;--ibt:#93c5fd;--pb:#1e1835;--pbr:#7c3aed;--pbt:#c4b5fd}}
+html{font-size:16px;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;font-size:15px;line-height:1.75;color:var(--text);background:var(--bg);overflow-x:hidden}
+#page-header{background:var(--bg);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100}
+.logo-text{font-size:1.15rem;font-weight:700;color:var(--text);letter-spacing:-.02em}
+.lang-sw{display:flex;gap:4px;flex-wrap:wrap}
+.lang-btn{display:inline-block;padding:4px 10px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;color:var(--text2);border:1px solid var(--border);background:var(--bg);cursor:pointer;transition:all .15s}
+.lang-btn:hover,.lang-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+#tr-banner{background:var(--wb);border-bottom:2px solid var(--wbr);padding:10px 20px;font-size:13px;color:var(--wbt)}
+#tr-banner p+p{margin-top:4px}
+main{padding:28px 20px 60px;max-width:800px;margin:0 auto}
+.doc-hdr{margin-bottom:28px;padding-bottom:20px;border-bottom:2px solid var(--border)}
+.doc-hdr h1{font-size:1.7rem;font-weight:700;color:var(--text);margin-bottom:8px;letter-spacing:-.02em}
+.doc-meta{display:flex;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--text2);margin-bottom:14px}
+.ci-table{font-size:13px;width:100%;border-collapse:collapse;margin-top:12px}
+.ci-table td{padding:3px 8px 3px 0;vertical-align:top;border:none}
+.ci-table td:first-child{font-weight:600;color:var(--text2);white-space:nowrap;min-width:110px}
+.toc{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:18px 22px;margin-bottom:28px}
+.toc h2{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text2);margin-bottom:10px}
+.toc ol{padding-left:20px}.toc li{margin-bottom:3px}
+.toc a{color:var(--link);text-decoration:none;font-size:14px}.toc a:hover{text-decoration:underline}
+article{margin-bottom:44px;scroll-margin-top:76px}
+article h2{font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:14px;padding:8px 0;border-top:2px solid var(--border)}article:first-of-type h2{border-top:none;padding-top:0}
+article h3{font-size:1rem;font-weight:600;color:var(--text);margin:18px 0 8px}
+p{margin-bottom:10px}p:last-child{margin-bottom:0}
+ul,ol{padding-left:20px;margin-bottom:10px}li{margin-bottom:4px}
+.dt{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0;display:block;overflow-x:auto}
+.dt th{background:var(--bg2);font-weight:600;text-align:left;padding:7px 10px;border:1px solid var(--border);white-space:nowrap}
+.dt td{padding:7px 10px;border:1px solid var(--border);vertical-align:top}
+.dt tr:nth-child(even) td{background:var(--bg2)}
+.legal-critical,.legal-warning,.legal-info,.legal-correction{border-left:4px solid;border-radius:4px;padding:12px 14px;margin:14px 0;font-size:14px}
+.legal-critical{background:var(--cb);border-color:var(--cbr);color:var(--cbt)}
+.legal-warning{background:var(--wb);border-color:var(--wbr);color:var(--wbt)}
+.legal-info{background:var(--ib);border-color:var(--ibr);color:var(--ibt)}
+.legal-correction{background:var(--pb);border-color:var(--pbr);color:var(--pbt)}
+.legal-critical h3,.legal-warning h3,.legal-info h3,.legal-correction h3{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin:0 0 8px;border:none;padding:0}
+#page-footer{background:var(--bg2);border-top:1px solid var(--border);padding:28px 20px;font-size:13px;color:var(--text2)}
+.fi{max-width:800px;margin:0 auto}.fi h3{font-size:14px;font-weight:700;color:var(--text);margin-bottom:10px}
+.fg{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin-bottom:16px}
+.fg dt{font-weight:600;white-space:nowrap}.fg dd{color:var(--text2)}
+.vh{margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-size:12px}
+body.embed-mode #page-header,body.embed-mode #page-footer{display:none}
+body.embed-mode main{padding-top:14px}
+.hidden{display:none!important}
+a{color:var(--link)}a:hover{color:var(--lhov)}strong{font-weight:600}
+@media(max-width:600px){#page-header{padding:10px 14px}main{padding:18px 14px 44px}article h2{font-size:1.05rem}.fg{grid-template-columns:1fr}}</style>
 </head>
-
 <body>
-  <header id="page-header">
-    <span class="logo-text">Dear Us</span>
-    <nav class="lang-sw" id="lsw">
-      <a href="?lang=ko" class="lang-btn" data-lang="ko">한국어</a>
-      <a href="?lang=en" class="lang-btn" data-lang="en">English</a>
-      <a href="?lang=es" class="lang-btn" data-lang="es">Español</a>
-      <a href="?lang=pt" class="lang-btn" data-lang="pt">Português</a>
-    </nav>
-  </header>
-  <div id="tr-banner" class="hidden">
-    <div style="max-width:800px;margin:0 auto">
-      <p>This is a translation provided for informational purposes only. In the event of any conflict between this
-        translation and the English text, the English text prevails.</p>
-      <p>이 번역은 정보 제공 목적으로만 제공됩니다;. 본 번역과 영문 원본 사이에 충돌이 있을 경우, 영문 원본이 우선합니다.</p>
-    </div>
+<header id="page-header">
+  <span class="logo-text">Dear Us</span>
+  <nav class="lang-sw" id="lsw">
+    <a href="?lang=ko" class="lang-btn" data-lang="ko">한국어</a>
+    <a href="?lang=en" class="lang-btn" data-lang="en">English</a>
+    <a href="?lang=es" class="lang-btn" data-lang="es">Español</a>
+    <a href="?lang=pt" class="lang-btn" data-lang="pt">Português</a>
+  </nav>
+</header>
+<div id="tr-banner" class="hidden">
+  <div style="max-width:800px;margin:0 auto">
+    <p>This is a translation provided for informational purposes only. In the event of any conflict between this translation and the English text, the English text prevails.</p>
+    <p>이 번역은 정보 제공 목적으로만 제공됩니다;. 본 번역과 영문 원본 사이에 충돌이 있을 경우, 영문 원본이 우선합니다;.</p>
   </div>
-  <div id="doc-en" class="doc-lang">
-    <main>
-      <div class="doc-hdr">
-        <h1>Location-Based Service Terms</h1>
-        <p class="eff-date">Effective: April 7, 2026 &bull; Version 2.5</p>
-      </div>
+</div>
+<div id="doc-en" class="doc-lang">
+<main>
+<div class="doc-hdr"><h1>Location-Based Service Terms</h1><p class="eff-date">Version 2.5 &bull; Effective April 7, 2026</p></div>
+<article id="en-art1">
+<h2>Article 5. Location-Based Services &mdash; Full Korean Law Compliance</h2>
+<h3>5.1  Statutory Compliance Framework</h3>
+<div class="tbl-wrap"><table>
+<thead><tr><th>📋  Location Information Act Compliance &mdash; Mandatory Disclosures (Art. 16)The Company operates the Safety Check-In feature in full compliance with the Act on the Protection and Use of Location Information of the Republic of Korea (이하 '위치정보법').The following mandatory statutory obligations are affirmed and implemented:• LOCATION INFORMATION MANAGER (위치정보관리책임자): Kim Minjung (dev@with-stan.com) is designated as the Company's Location Information Manager pursuant to Art. 5 of the Location Information Act.• USE/PROVISION LOG RETENTION (이용&middot;제공사실 확인자료): The Company retains a Location Use and Provision Log for a minimum of 6 months pursuant to Art. 16(2) of the Location Information Act. This log contains: service timestamp, anonymized user UID, anonymized recipient UID (partner). Raw GPS coordinates are NOT stored in this log.• CONSENT REQUIREMENT: Location data is collected only upon separate, explicit, affirmative consent obtained prior to first use of the Safety Check-In feature, pursuant to Art. 15 of the Location Information Act.• SEPARATION FROM CORE SERVICE: Refusal of location consent has no effect on the User's ability to access any core Service feature.</th></tr></thead>
+<tbody>
+</table></div>
+<h3>5.2  Location Data Processing Details</h3>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Data Collected</th><th>Real-time GPS coordinates (latitude/longitude), movement path, check-in completion time</th></tr></thead>
+<tbody>
+<tr><td>Purpose</td><td>Transmitting real-time location and safe arrival notifications to the connected partner only</td></tr>
+<tr><td>Recipients</td><td>The connected partner only &mdash; never used for advertising, marketing, analytics, or any other purpose</td></tr>
+<tr><td>Legal Basis (Korea)</td><td>Separate explicit consent under Location Information Act Art. 15</td></tr>
+<tr><td>Legal Basis (Brazil)</td><td>Explicit consent under LGPD Art. 7(I) and Art. 11(I)</td></tr>
+<tr><td>Legal Basis (Mexico)</td><td>Explicit consent under LFPDPPP</td></tr>
+<tr><td>Legal Basis (Philippines)</td><td>Explicit consent under DPA 2012</td></tr>
+<tr><td>Withdrawal</td><td>App Settings &rarr; Safety Check-In &rarr; Disable. Data collection stops immediately.</td></tr>
+<tr><td>GPS Data Retention</td><td>Auto-deleted within 7 days of check-in completion. Users may delete earlier.</td></tr>
+<tr><td>Use/Provision Log</td><td>6 months &mdash; Location Information Act Art. 16(2). No GPS coordinates in log.</td></tr>
+</tbody>
+</table></div>
+<h3>5.3  Limitation of Liability &mdash; Location Services</h3>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Liability Category</th><th>Scope</th></tr></thead>
+<tbody>
+<tr><td>Partner's use of received data</td><td>The Company has no ability to monitor or control how the receiving partner uses location data after delivery. Not liable in civil law for harm caused by partner's conduct with received data.</td></tr>
+<tr><td>Misuse (stalking/coercion)</td><td>Criminal conduct. Immediate permanent termination + law enforcement referral. Cooperation constitutes the full extent of the Company's legal obligations; it does not constitute admission of civil liability.</td></tr>
+<tr><td>GPS inaccuracy or service interruption</td><td>Not liable for harm from GPS signal instability, network failures, or service interruptions beyond the Company's control.</td></tr>
+<tr><td>Design limitations</td><td>The Company does not warrant that the feature is immune to all forms of social engineering or coercion occurring outside the application's technical controls.</td></tr>
+</tbody>
+</table></div>
+</main>
+</div>
+<div id="doc-ko" class="doc-lang hidden">
+<main>
+<div class="doc-hdr"><h1>위치기반서비스 이용약관</h1><p class="eff-date">v2.0 | 시행일: 2026년 4월 7일</p></div>
+<div class="legal-warning"><p>⚠ 출시 전 필수 사항: ① 방통위 위치기반서비스사업자 신고 후 서비스 제공 (미신고 시 위치정보법 위반). ② 기술적&middot;관리적 보호조치 계획서 첨부 제출. ③ 위치정보 이용&middot;제공사실 확인자료 6개월 자동 기록 시스템 구현. ④ 본 약관은 신고 수리 후 시행합니다.</p></div>
+<article id="ko-art1">
+<h2>제 1 조 (목적)</h2>
+<p>본 약관은 위치정보의 보호 및 이용 등에 관한 법률 제16조에 따라, 위드스탠이 제공하는 위치기반서비스 '안심 귀가 체크'의 이용 조건을 규정합니다.</p>
+<article id="ko-art2">
+<h2>제 2 조 (위치기반서비스 내용)</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>항목</th><th>내용</th></tr></thead>
+<tbody>
+<tr><td>서비스명</td><td>안심 귀가 체크 &mdash; 커플 파트너 간 실시간 GPS 위치 공유 및 귀가 완료 알림 서비스</td></tr>
+<tr><td>서비스 성격</td><td>선택 기능. 미동의 시 기본 서비스(다이어리&middot;Q&amp;A 등) 정상 이용 가능.</td></tr>
+</tbody>
+</table></div>
+<article id="ko-art3">
+<h2>제 3 조 (개인위치정보 수집&middot;이용 목적 및 보관)</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>항목</th><th>내용</th></tr></thead>
+<tbody>
+<tr><td>수집 항목</td><td>GPS 위도&middot;경도, 이동 경로, 귀가 완료 시간</td></tr>
+<tr><td>이용 목적</td><td>커플 파트너에게 실시간 안심 귀가 여부 확인 서비스 제공</td></tr>
+<tr><td>GPS 원본 보유 기간</td><td>귀가 완료 후 7일 자동 삭제. 이용자 직접 삭제 가능.</td></tr>
+<tr><td>이용&middot;제공사실 확인자료</td><td>6개월 자동 기록 보관 (위치정보법 제16조 제2항). 내용: 이용 일시, 이용자 UID, 제공 대상 UID. GPS 좌표 미포함.</td></tr>
+</tbody>
+</table></div>
+<article id="ko-art4">
+<h2>제 4 조 (개인위치정보의 제3자 제공)</h2>
+<p>연결된 커플 파트너 1인에게만 제공합니다. 광고&middot;마케팅&middot;기타 목적으로 사용하지 않습니다.</p>
+<article id="ko-art5">
+<h2>제 5 조 (이용자의 권리)</h2>
+<p>동의 철회: 앱 설정 &rarr; 안심 귀가 &rarr; 비활성화 (즉시 수집&middot;전송 중단)</p>
+<p>열람 및 고지 요청: privacy@with-stan.com</p>
+<p>이용&middot;제공사실 확인자료 열람 요청: privacy@with-stan.com</p>
+<p>일시 정지: 앱 내 기능 비활성화로 즉시 가능</p>
+<article id="ko-art6">
+<h2>제 5 조의2 (기술적&middot;관리적 보호조치 &mdash; 위치정보법 제16조 제1항)</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>법적 고지 의무: 위치정보법 제16조 제1항은 위치기반서비스사업자가 이용자의 위치정보를 보호하기 위한 기술적&middot;관리적 조치를 취하고, 그 내용을 이용자에게 고지할 것을 요구합니다.</th></tr></thead>
+<tbody>
+</table></div>
+<div class="tbl-wrap"><table>
+<thead><tr><th>조치 유형</th><th>구체적 내용</th></tr></thead>
+<tbody>
+<tr><td>암호화</td><td>위치 데이터 전송 시 TLS 1.2 이상 암호화. 서버 저장 시 AES-256 암호화 적용.</td></tr>
+<tr><td>접근 통제</td><td>위치 데이터는 연결된 커플 파트너 1인에게만 제공. Firebase Security Rules로 비인가 접근 차단.</td></tr>
+<tr><td>이용 기록 보관</td><td>위치정보 이용&middot;제공사실 확인자료 6개월 자동 기록 보관 (위치정보법 제16조 제2항).</td></tr>
+<tr><td>최소 보유</td><td>GPS 원본 좌표는 귀가 완료 후 7일 이내 자동 삭제. 장기 보관 없음.</td></tr>
+<tr><td>접속 로그 관리</td><td>위치정보 시스템 접속 기록 보관 및 위변조 방지 조치 시행.</td></tr>
+<tr><td>내부 접근 제한</td><td>당사 임직원의 위치 데이터 접근은 법령 요청 등 극히 제한된 경우에만 허용.</td></tr>
+</tbody>
+</table></div>
+<article id="ko-art7">
+<h2>제 6 조 (위치정보 관리 책임자)</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>항목</th><th>내용</th></tr></thead>
+<tbody>
+<tr><td>위치정보 관리 책임자</td><td>김민정</td></tr>
+<tr><td>연락처</td><td>dev@with-stan.com</td></tr>
+<tr><td>시행일</td><td>2026년 4월 7일</td></tr>
+<tr><td>운영자</td><td>위드스탠</td></tr>
+</tbody>
+</table></div>
+</main>
+</div>
+<div id="doc-es" class="doc-lang hidden">
+<main>
+<div class="doc-hdr"><h1>Términos del Servicio Basado en Ubicación</h1><p class="eff-date">Vigente: 7 de abril de 2026 &bull; Versión 2.0</p></div>
+<article id="es-l1"><h2>Artículo 1. Objeto</h2><p>Estos términos regulan las condiciones de uso del servicio de ubicación ‘Verificación de llegada segura’ de WithStan, de conformidad con la Ley de Información de Ubicación de Corea.</p></article><article id="es-l2"><h2>Artículo 2. Contenido del Servicio Basado en Ubicación</h2><p>La Verificación de llegada segura es una función opcional que transmite su ubicación GPS en tiempo real al único partner de pareja conectado, notificándole su llegada segura.</p></article><article id="es-l3"><h2>Artículo 3. Recolección, Finalidad y Retención</h2><div class="tbl-wrap"><table><thead><tr><th>Elemento</th><th>Detalle</th></tr></thead><tbody><tr><td>Datos recopilados</td><td>Coordenadas GPS (latitud/longitud), ruta de movimiento, hora de llegada segura</td></tr><tr><td>Finalidad</td><td>Notificación de llegada segura al partner conectado</td></tr><tr><td>Retención GPS</td><td>Auto-eliminado en 7 días</td></tr><tr><td>Log de uso/provisión</td><td>6 meses (Ley de Información de Ubicación, Art. 16(2))</td></tr></tbody></table></div></article><article id="es-l4"><h2>Artículo 4. Provisión a Terceros</h2><p>Solo se proporciona al único partner de pareja conectado. No se usa para publicidad, marketing ni otros fines.</p></article><article id="es-l5"><h2>Artículo 5. Derechos del Usuario</h2><ul><li>Retiro del consentimiento: Configuración &rarr; Verificación de llegada segura &rarr; Desactivar</li><li>Solicitudes de acceso y notificación: privacy@with-stan.com</li><li>Pausa temporal: desactivar la función dentro de la app</li></ul></article><article id="es-l6"><h2>Responsable de Información de Ubicación</h2><p>Kim Minjung / dev@with-stan.com | Fecha de vigencia: 7 de abril de 2026 | Operador: WithStan</p></article></main>
+</div>
+<div id="doc-pt" class="doc-lang hidden">
+<main>
+<div class="doc-hdr"><h1>Termos do Serviço Baseado em Localização</h1><p class="eff-date">Vigência: 7 de abril de 2026 &bull; Versão 2.0</p></div>
+<article id="pt-l1"><h2>Artigo 1. Objeto</h2><p>Estes termos regulam as condições de uso do serviço de localização ‘Verificação de chegada segura’ da WithStan, em conformidade com a Lei de Informações de Localização da Coreia.</p></article><article id="pt-l2"><h2>Artigo 2. Conteúdo do Serviço</h2><p>A Verificação de chegada segura é uma função opcional que transmite sua localização GPS em tempo real apenas ao único parceiro conectado, notificando-o sobre sua chegada segura.</p></article><article id="pt-l3"><h2>Artigo 3. Coleta, Finalidade e Retenção</h2><div class="tbl-wrap"><table><thead><tr><th>Item</th><th>Detalhe</th></tr></thead><tbody><tr><td>Dados coletados</td><td>Coordenadas GPS, rota de movimento, hora de chegada segura</td></tr><tr><td>Finalidade</td><td>Notificação de chegada segura ao parceiro</td></tr><tr><td>Retenção GPS</td><td>Auto-excluído em 7 dias</td></tr><tr><td>Log de uso/fornecimento</td><td>6 meses (Lei de Informações de Localização, Art. 16(2))</td></tr></tbody></table></div></article><article id="pt-l4"><h2>Artigo 4. Fornecimento a Terceiros</h2><p>Fornecido apenas ao único parceiro de casal conectado. Não usado para publicidade ou marketing.</p></article><article id="pt-l5"><h2>Artigo 5. Direitos do Usuário</h2><ul><li>Retirada do consentimento: Configurações &rarr; Verificação de chegada segura &rarr; Desativar</li><li>Solicitações de acesso: privacy@with-stan.com</li></ul></article><article id="pt-l6"><h2>Responsável pelas Informações de Localização</h2><p>Kim Minjung / dev@with-stan.com | Data de vigência: 7 de abril de 2026 | Operadora: WithStan</p></article></main>
+</div>
 
-      <article id="en-l1">
-        <h2>1. Overview</h2>
-        <p>Dear Us offers optional location-based features (&ldquo;Location Services&rdquo;) that use your
-          device&rsquo;s location data to provide nearby content and connection discovery. Location Services are
-          entirely optional and require your explicit consent before activation.</p>
-        <div class="legal-info">
-          <p>You may use Dear Us without ever enabling Location Services. All core features (fan clubs, content,
-            messaging) function without location data.</p>
-        </div>
-      </article>
-
-      <article id="en-l2">
-        <h2>2. Types of Location Data Collected</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Type</th>
-              <th>Precision</th>
-              <th>Storage</th>
-              <th>Purpose</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Precise Location (GPS)</td>
-              <td>Within ~10 meters</td>
-              <td>Not stored on servers; used in real-time only</td>
-              <td>Find nearby Stans within your immediate area</td>
-            </tr>
-            <tr>
-              <td>Approximate Location (IP-based)</td>
-              <td>Country / major city level</td>
-              <td>Not stored at subdivision level</td>
-              <td>Content localization (language, trending topics)</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Precise location data is <strong>never stored on our servers</strong>. It is processed on-device and
-          transmitted only as a proximity query (e.g., &ldquo;users within 5 km&rdquo;) that returns results without
-          revealing your exact coordinates to other users.</p>
-      </article>
-
-      <article id="en-l3">
-        <h2>3. How Location is Used</h2>
-        <h3>3.1 Nearby Stans Discovery</h3>
-        <p>When enabled, the app uses your current precise location to show other users who have also opted into the
-          &ldquo;Nearby Stans&rdquo; feature within a configurable radius (1 km &ndash; 50 km). Your exact location is
-          never shared; only the approximate distance or direction may be displayed.</p>
-        <h3>3.2 Content Localization</h3>
-        <p>Your approximate region (derived from IP address) is used to surface locally relevant trending content, event
-          announcements, and language defaults. This does not require Location Services permission.</p>
-        <h3>3.3 Safety and Abuse Prevention</h3>
-        <p>In cases of reported harassment or threats with a location component, we may use retained approximate
-          location logs (IP-level only) to assist in investigations, in compliance with applicable law.</p>
-      </article>
-
-      <article id="en-l4">
-        <h2>4. Consent and Controls</h2>
-        <ul>
-          <li><strong>Initial consent:</strong> Location Services are off by default. You must explicitly enable them in
-            the app settings.</li>
-          <li><strong>Granular control:</strong> You may switch between &ldquo;While Using the App&rdquo; and
-            &ldquo;Always&rdquo; permission in your device settings. We recommend &ldquo;While Using the App.&rdquo;
-          </li>
-          <li><strong>Disable at any time:</strong> You can disable Location Services in the app settings or your
-            device&rsquo;s app permissions. Disabling does not affect any other features.</li>
-          <li><strong>Visibility control:</strong> When using Nearby Stans, you can toggle your own visibility to others
-            independently of your ability to see others.</li>
-        </ul>
-      </article>
-
-      <article id="en-l5">
-        <h2>5. Third-Party Location Providers</h2>
-        <p>Location coordinates are resolved using the device&rsquo;s native location API (Apple Core Location / Android
-          Location Services). We do not use third-party SDKs to collect location data. Proximity matching is performed
-          on our servers using anonymized geohash data; no third-party mapping services receive your location data.</p>
-      </article>
-
-      <article id="en-l6">
-        <h2>6. Applicable Law</h2>
-        <p>These Location-Based Service Terms are provided in accordance with:</p>
-        <ul>
-          <li>Korea &mdash; Act on the Protection and Use of Location Information (위치정보의 보호 및 이용 등에 관한 법률)</li>
-          <li>EU/EEA &mdash; GDPR Article 9 (where applicable for sensitive categories) and Article 6(1)(a) (consent)
-          </li>
-          <li>California &mdash; CCPA / CPRA geolocation provisions</li>
-        </ul>
-        <p>If you are in a jurisdiction with specific location data regulations, you retain all rights provided by that
-          law in addition to those described here.</p>
-      </article>
-
-      <article id="en-l7">
-        <h2>7. Contact</h2>
-        <p>For questions about location data handling: privacy@with-stan.com</p>
-        <p>To request deletion of any location-derived data: include &ldquo;Location Data Deletion&rdquo; in the subject
-          line.</p>
-      </article>
-    </main>
+<footer id="page-footer">
+  <div class="fi">
+    <h3>WithStan</h3>
+    <dl class="fg">
+      <dt>대표 / Representative</dt><dd>현싹환 (Hyun Seunghwan)</dd>
+      <dt>주소 / Address</dt><dd>서울특별시 강북구 노해로 23길 123, 5층 503호<br>503, 5F, 23-gil 123 Nohae-ro, Gangbuk-gu, Seoul, Republic of Korea</dd>
+      <dt>DPO / 위치정보관리체임자</dt><dd>Kim Minjung &middot; dev@with-stan.com</dd>
+      <dt>개인정보 문의 / Privacy</dt><dd>privacy@with-stan.com</dd>
+      <dt>고객지원 / Support</dt><dd>support@with-stan.com</dd>
+    </dl>
+    <div class="vh">Version History: v1.0 &rarr; v1.1 &rarr; v2.1 (withdrawn) &rarr; v2.2 (Definitive) &rarr; v2.5 (current)</div>
   </div>
-  <div id="doc-ko" class="doc-lang hidden">
-    <main>
-      <div class="doc-hdr">
-        <h1>위치기반서비스 이용약관</h1>
-        <p class="eff-date">시행일: 2026년 4월 7일 &bull; 버전 2.5</p>
-      </div>
-
-      <article id="ko-l1">
-        <h2>1. 개요</h2>
-        <p>Dear Us는 선택적 위치기반 기능('위치서비스')을 제공합니다. 위치서비스는 완전히 선택 사항이며, 활성화 전 명시적 동의가 필요합니다.</p>
-        <div class="legal-info">
-          <p>위치서비스를 활성화하지 않아도 Dear Us의 모든 핵심 기능(팬클럽, 콘텐츠, 메시지)을 이용할 수 있습니다.</p>
-        </div>
-      </article>
-
-      <article id="ko-l2">
-        <h2>2. 수집하는 위치정보 유형</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>유형</th>
-              <th>정밀도</th>
-              <th>저장</th>
-              <th>목적</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>정밀 위치(GPS)</td>
-              <td>약 10m 이내</td>
-              <td>서버에 저장 안 함, 실시간만 사용</td>
-              <td>주변 스탠 검색</td>
-            </tr>
-            <tr>
-              <td>대략적 위치(IP 기반)</td>
-              <td>국가/주요 도시 수준</td>
-              <td>행정구역 이하로 저장 안 함</td>
-              <td>콘텐츠 현지화</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>정밀 위치 데이터는 <strong>절대 서버에 저장되지 않습니다.</strong> 기기에서 처리되며, 귀하의 정확한 좌표가 다른 이용자에게 공개되지 않는 근접 쿼리로만 전송됩니다.</p>
-      </article>
-
-      <article id="ko-l3">
-        <h2>3. 위치 정보 활용 방법</h2>
-        <h3>3.1 주변 스탠 검색</h3>
-        <p>활성화 시, 앱은 현재 정밀 위치를 사용하여 설정한 반경(1km~50km) 내에서 '주변 스탠' 기능을 활성화한 다른 이용자를 표시합니다. 정확한 위치는 절대 공유되지 않으며, 대략적인 거리 또는
-          방향만 표시될 수 있습니다.</p>
-        <h3>3.2 콘텐츠 현지화</h3>
-        <p>IP 주소에서 파생된 대략적인 지역은 현지 트렌드 콘텐츠, 이벤트 공지, 언어 기본값을 제공하는 데 사용됩니다. 위치 서비스 권한이 필요하지 않습니다.</p>
-        <h3>3.3 안전 및 악용 방지</h3>
-        <p>위치 요소가 있는 신고된 괴롭힘 또는 위협의 경우, 해당 법률에 따라 조사를 지원하기 위해 보유된 대략적 위치 로그(IP 수준)를 사용할 수 있습니다.</p>
-      </article>
-
-      <article id="ko-l4">
-        <h2>4. 동의 및 제어</h2>
-        <ul>
-          <li><strong>최초 동의:</strong> 위치서비스는 기본적으로 꺼져 있습니다. 앱 설정에서 명시적으로 활성화해야 합니다.</li>
-          <li><strong>세분화된 제어:</strong> 기기 설정에서 '앱 사용 중만' 또는 '항상' 권한을 선택할 수 있습니다. '앱 사용 중만'을 권장합니다.</li>
-          <li><strong>언제든지 비활성화:</strong> 앱 설정 또는 기기 앱 권한에서 비활성화 가능합니다. 비활성화해도 다른 기능에는 영향을 주지 않습니다.</li>
-          <li><strong>가시성 제어:</strong> 주변 스탠 이용 시, 타인을 볼 수 있는 기능과 독립적으로 자신의 가시성을 토글할 수 있습니다.</li>
-        </ul>
-      </article>
-
-      <article id="ko-l5">
-        <h2>5. 제3자 위치 제공자</h2>
-        <p>위치 좌표는 기기의 기본 위치 API(Apple Core Location / Android Location Services)를 사용합니다. 제3자 SDK를 사용하여 위치 데이터를 수집하지
-          않습니다. 근접 매칭은 익명화된 지오해시 데이터를 사용하여 서버에서 처리되며, 제3자 지도 서비스에 귀하의 위치 데이터가 전달되지 않습니다.</p>
-      </article>
-
-      <article id="ko-l6">
-        <h2>6. 적용 법률</h2>
-        <p>본 약관은 다음 법률에 따라 제공됩니다:</p>
-        <ul>
-          <li>대한민국 &mdash; 위치정보의 보호 및 이용 등에 관한 법률</li>
-          <li>EU/EEA &mdash; GDPR 제9조(해당 시) 및 제6조 1항(a)(동의)</li>
-          <li>캘리포니아 &mdash; CCPA/CPRA 지리적 위치 조항</li>
-        </ul>
-      </article>
-
-      <article id="ko-l7">
-        <h2>7. 문의</h2>
-        <p>위치 데이터 처리 관련 문의: privacy@with-stan.com</p>
-        <p>위치 파생 데이터 삭제 요청 시 제목에 "위치 데이터 삭제"를 포함해 주세요.</p>
-      </article>
-    </main>
-  </div>
-  <div id="doc-es" class="doc-lang hidden">
-    <main>
-      <div class="doc-hdr">
-        <h1>Términos del Servicio Basado en Ubicación</h1>
-        <p class="eff-date">Vigente: 7 de abril de 2026 &bull; Versión 2.5</p>
-      </div>
-
-      <article id="es-l1">
-        <h2>1. Descripción General</h2>
-        <p>Dear Us ofrece funciones opcionales basadas en ubicación (&ldquo;Servicios de Ubicación&rdquo;). Son
-          completamente opcionales y requieren tu consentimiento explícito antes de activarse.</p>
-        <div class="legal-info">
-          <p>Puedes usar Dear Us sin activar los Servicios de Ubicación. Todas las funciones principales (fan clubs,
-            contenido, mensajes) funcionan sin datos de ubicación.</p>
-        </div>
-      </article>
-
-      <article id="es-l2">
-        <h2>2. Tipos de Datos de Ubicación Recopilados</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Tipo</th>
-              <th>Precisión</th>
-              <th>Almacenamiento</th>
-              <th>Finalidad</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Ubicación Precisa (GPS)</td>
-              <td>Aprox. 10 metros</td>
-              <td>No se almacena; uso en tiempo real únicamente</td>
-              <td>Encontrar Stans cercanos</td>
-            </tr>
-            <tr>
-              <td>Ubicación Aproximada (por IP)</td>
-              <td>País / ciudad principal</td>
-              <td>No se almacena a nivel subnacional</td>
-              <td>Localización de contenido</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Los datos de ubicación precisa <strong>nunca se almacenan en nuestros servidores</strong>. Se procesan en el
-          dispositivo y solo se transmiten como una consulta de proximidad que no revela tus coordenadas exactas a otros
-          usuarios.</p>
-      </article>
-
-      <article id="es-l3">
-        <h2>3. Cómo se Usa la Ubicación</h2>
-        <h3>3.1 Descubrimiento de Stans Cercanos</h3>
-        <p>Cuando está habilitado, la app usa tu ubicación actual para mostrar otros usuarios que también activaron
-          &ldquo;Stans cercanos&rdquo; dentro de un radio configurable (1 km &ndash; 50 km). Tu ubicación exacta nunca
-          se comparte; solo puede mostrarse la distancia o dirección aproximada.</p>
-        <h3>3.2 Localización de Contenido</h3>
-        <p>Tu región aproximada (derivada de la IP) se usa para mostrar contenido de tendencia local, anuncios de
-          eventos y configuración de idioma. No requiere permiso de Servicios de Ubicación.</p>
-      </article>
-
-      <article id="es-l4">
-        <h2>4. Consentimiento y Controles</h2>
-        <ul>
-          <li><strong>Consentimiento inicial:</strong> Los Servicios de Ubicación están desactivados por defecto. Debes
-            habilitarlos explícitamente en la configuración de la app.</li>
-          <li><strong>Control granular:</strong> Puedes elegir entre &ldquo;Solo mientras se usa la app&rdquo; o
-            &ldquo;Siempre&rdquo; en la configuración del dispositivo. Recomendamos &ldquo;Solo mientras se usa la
-            app.&rdquo;</li>
-          <li><strong>Desactivar en cualquier momento:</strong> Puedes deshabilitar los Servicios de Ubicación en la
-            configuración de la app o en los permisos de la app de tu dispositivo.</li>
-          <li><strong>Control de visibilidad:</strong> Puedes controlar tu visibilidad para otros usuarios de forma
-            independiente.</li>
-        </ul>
-      </article>
-
-      <article id="es-l5">
-        <h2>5. Derecho Aplicable</h2>
-        <p>Estos términos se rigen por las leyes de la República de Corea sobre información de ubicación, RGPD (para
-          usuarios del EEE) y las disposiciones de geolocalización de CCPA/CPRA (para usuarios de California).</p>
-      </article>
-
-      <article id="es-l6">
-        <h2>6. Contacto</h2>
-        <p>Consultas sobre el manejo de datos de ubicación: privacy@with-stan.com</p>
-      </article>
-    </main>
-  </div>
-  <div id="doc-pt" class="doc-lang hidden">
-    <main>
-      <div class="doc-hdr">
-        <h1>Termos do Serviço Baseado em Localização</h1>
-        <p class="eff-date">Vigência: 7 de abril de 2026 &bull; Versão 2.5</p>
-      </div>
-
-      <article id="pt-l1">
-        <h2>1. Visão Geral</h2>
-        <p>Dear Us oferece funcionalidades opcionais baseadas em localização (&ldquo;Serviços de Localização&rdquo;).
-          São completamente opcionais e exigem seu consentimento explícito antes da ativação.</p>
-        <div class="legal-info">
-          <p>Você pode usar o Dear Us sem ativar os Serviços de Localização. Todas as funções principais (fã-clubes,
-            conteúdo, mensagens) funcionam sem dados de localização.</p>
-        </div>
-      </article>
-
-      <article id="pt-l2">
-        <h2>2. Tipos de Dados de Localização Coletados</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Tipo</th>
-              <th>Precisão</th>
-              <th>Armazenamento</th>
-              <th>Finalidade</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Localização Precisa (GPS)</td>
-              <td>Aprox. 10 metros</td>
-              <td>Não armazenada; uso em tempo real apenas</td>
-              <td>Encontrar Stans próximos</td>
-            </tr>
-            <tr>
-              <td>Localização Aproximada (por IP)</td>
-              <td>País / cidade principal</td>
-              <td>Não armazenada abaixo do nível nacional</td>
-              <td>Localização de conteúdo</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Os dados de localização precisa <strong>nunca são armazenados em nossos servidores</strong>. São processados
-          no dispositivo e transmitidos apenas como uma consulta de proximidade que não revela suas coordenadas exatas
-          para outros usuários.</p>
-      </article>
-
-      <article id="pt-l3">
-        <h2>3. Como a Localização é Usada</h2>
-        <h3>3.1 Descoberta de Stans Próximos</h3>
-        <p>Quando habilitado, o app usa sua localização atual para mostrar outros usuários que também ativaram
-          &ldquo;Stans próximos&rdquo; dentro de um raio configurável (1 km &ndash; 50 km). Sua localização exata nunca
-          é compartilhada; apenas a distância ou direção aproximada pode ser exibida.</p>
-        <h3>3.2 Localização de Conteúdo</h3>
-        <p>Sua região aproximada (derivada do IP) é usada para mostrar conteúdo relevante localmente, anúncios de
-          eventos e padrões de idioma. Não requer permissão de Serviços de Localização.</p>
-      </article>
-
-      <article id="pt-l4">
-        <h2>4. Consentimento e Controles</h2>
-        <ul>
-          <li><strong>Consentimento inicial:</strong> Os Serviços de Localização estão desativados por padrão. Você deve
-            habilitá-los explicitamente nas configurações do app.</li>
-          <li><strong>Controle granular:</strong> Você pode escolher entre &ldquo;Somente enquanto usa o app&rdquo; ou
-            &ldquo;Sempre&rdquo; nas configurações do dispositivo. Recomendamos &ldquo;Somente enquanto usa o
-            app.&rdquo;</li>
-          <li><strong>Desativar a qualquer momento:</strong> Você pode desativar os Serviços de Localização nas
-            configurações do app ou nas permissões do app do seu dispositivo.</li>
-          <li><strong>Controle de visibilidade:</strong> Você pode controlar sua visibilidade para outros usuários de
-            forma independente.</li>
-        </ul>
-      </article>
-
-      <article id="pt-l5">
-        <h2>5. Lei Aplicável</h2>
-        <p>Estes termos são regidos pelas leis da República da Coreia sobre informações de localização, RGPD (para
-          usuários do EEE) e as disposições de geolocalização do CCPA/CPRA (para usuários da Califórnia).</p>
-      </article>
-
-      <article id="pt-l6">
-        <h2>6. Contato</h2>
-        <p>Dúvidas sobre o tratamento de dados de localização: privacy@with-stan.com</p>
-      </article>
-    </main>
-  </div>
-  <footer id="page-footer">
-    <div class="fi">
-      <h3>WithStan</h3>
-      <dl class="fg">
-        <dt>대표 / Representative</dt>
-        <dd>현승환 (Hyun Seunghwan)</dd>
-        <dt>주소 / Address</dt>
-        <dd>서울특별시 강북구 노해로 23길 123, 5층 503호<br>503, 5F, 23-gil 123 Nohae-ro, Gangbuk-gu, Seoul, Republic of Korea</dd>
-        <dt>DPO / 위치정보관리체임자</dt>
-        <dd>Kim Minjeong &middot; dev@with-stan.com</dd>
-        <dt>개인정보 문의 / Privacy</dt>
-        <dd>privacy@with-stan.com</dd>
-        <dt>고객지원 / Support</dt>
-        <dd>support@with-stan.com</dd>
-      </dl>
-      <div class="vh">Version History: v1.0 &rarr; v1.1 &rarr; v2.1 (withdrawn) &rarr; v2.2 (Definitive) &rarr; v2.5
-        (current)</div>
-    </div>
-  </footer>
-  <script>(function () {
-      var p = new URLSearchParams(location.search), lang = p.get('lang') || 'ko',
-        sup = ['ko', 'en', 'es', 'pt'], al = sup.includes(lang) ? lang : 'en', embed = p.get('embed') === 'true';
-      if (embed) document.body.classList.add('embed-mode');
-      document.querySelectorAll('.doc-lang').forEach(function (e) { e.classList.add('hidden') });
-      var d = document.getElementById('doc-' + al); if (d) d.classList.remove('hidden');
-      if (al !== 'en' && al !== 'ko') { var b = document.getElementById('tr-banner'); if (b) b.classList.remove('hidden'); }
-      document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === al) });
-      document.documentElement.lang = al;
-      var ml = document.getElementById('meta-lang'); if (ml) ml.setAttribute('content', al);
-      document.querySelectorAll('.lang-btn').forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault(); var nl = this.dataset.lang;
-          var np = new URLSearchParams(location.search); np.set('lang', nl);
-          if (embed) np.set('embed', 'true');
-          history.pushState({}, '', '?' + np.toString());
-          document.querySelectorAll('.doc-lang').forEach(function (e) { e.classList.add('hidden') });
-          var nd = document.getElementById('doc-' + nl); if (nd) nd.classList.remove('hidden');
-          var bn = document.getElementById('tr-banner');
-          if (bn) { if (nl !== 'en' && nl !== 'ko') bn.classList.remove('hidden'); else bn.classList.add('hidden'); }
-          document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === nl) });
-          document.documentElement.lang = nl; if (ml) ml.setAttribute('content', nl);
-        });
-      });
-    })();</script>
+</footer>
+<script>(function(){
+var p=new URLSearchParams(location.search),lang=p.get('lang')||'ko',
+    sup=['ko','en','es','pt'],al=sup.includes(lang)?lang:'en',embed=p.get('embed')==='true';
+if(embed)document.body.classList.add('embed-mode');
+document.querySelectorAll('.doc-lang').forEach(function(e){e.classList.add('hidden')});
+var d=document.getElementById('doc-'+al);if(d)d.classList.remove('hidden');
+var _tr=['es','pt'];var b=document.getElementById('tr-banner');if(b){if(_tr.includes(al))b.classList.remove('hidden');else b.classList.add('hidden');}
+document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===al)});
+document.documentElement.lang=al;
+var ml=document.getElementById('meta-lang');if(ml)ml.setAttribute('content',al);
+document.querySelectorAll('.lang-btn').forEach(function(btn){
+  btn.addEventListener('click',function(e){
+    e.preventDefault();var nl=this.dataset.lang;
+    var np=new URLSearchParams(location.search);np.set('lang',nl);
+    if(embed)np.set('embed','true');
+    history.pushState({},'','?'+np.toString());
+    document.querySelectorAll('.doc-lang').forEach(function(e){e.classList.add('hidden')});
+    var nd=document.getElementById('doc-'+nl);if(nd)nd.classList.remove('hidden');
+    var bn=document.getElementById('tr-banner');
+    if(bn){if(_tr.includes(nl))bn.classList.remove('hidden');else bn.classList.add('hidden');}
+    document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===nl)});
+    document.documentElement.lang=nl;if(ml)ml.setAttribute('content',nl);
+  });
+});
+})();</script>
 </body>
-
 </html>
