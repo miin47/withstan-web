@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="legal-doc-type" content="opensource">
+  <meta name="legal-doc-version" content="">
+  <meta id="meta-lang" name="legal-doc-lang" content="en">
+  <meta name="legal-effective-date" content="2026-04-07">
+  <title>Dear Us — Open Source Licenses</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg: #fff;
+      --bg2: #f7f8fc;
+      --text: #1c1c1e;
+      --text2: #555;
+      --border: #ddd;
+      --accent: #4f46e5;
+      --link: #2563eb;
+      --lhov: #1d4ed8;
+      --cb: #fff5f5;
+      --cbr: #e53e3e;
+      --cbt: #c53030;
+      --wb: #fffbeb;
+      --wbr: #d97706;
+      --wbt: #92400e;
+      --ib: #eff6ff;
+      --ibr: #3b82f6;
+      --ibt: #1e40af;
+      --pb: #f5f3ff;
+      --pbr: #7c3aed;
+      --pbt: #5b21b6
+    }
+
+    @media(prefers-color-scheme:dark) {
+      :root {
+        --bg: #1a1a1a;
+        --bg2: #252525;
+        --text: #e0e0e0;
+        --text2: #aaa;
+        --border: #3a3a3a;
+        --accent: #818cf8;
+        --link: #93c5fd;
+        --lhov: #bfdbfe;
+        --cb: #2d1b1b;
+        --cbr: #c53030;
+        --cbt: #fc8181;
+        --wb: #2d2514;
+        --wbr: #d97706;
+        --wbt: #fcd34d;
+        --ib: #1e2a3d;
+        --ibr: #3b82f6;
+        --ibt: #93c5fd;
+        --pb: #1e1835;
+        --pbr: #7c3aed;
+        --pbt: #c4b5fd
+      }
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden
+    }
+
+    #page-header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100
+    }
+
+    .logo-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.02em
+    }
+
+    .lang-sw {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap
+    }
+
+    .lang-btn {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--text2);
+      border: 1px solid var(--border);
+      background: var(--bg);
+      cursor: pointer;
+      transition: all .15s
+    }
+
+    .lang-btn:hover,
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent)
+    }
+
+    #tr-banner {
+      background: var(--wb);
+      border-bottom: 2px solid var(--wbr);
+      padding: 10px 20px;
+      font-size: 13px;
+      color: var(--wbt)
+    }
+
+    #tr-banner p+p {
+      margin-top: 4px
+    }
+
+    main {
+      padding: 28px 20px 60px;
+      max-width: 800px;
+      margin: 0 auto
+    }
+
+    .doc-hdr {
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border)
+    }
+
+    .doc-hdr h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      letter-spacing: -.02em
+    }
+
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text2);
+      margin-bottom: 14px
+    }
+
+    .ci-table {
+      font-size: 13px;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px
+    }
+
+    .ci-table td {
+      padding: 3px 8px 3px 0;
+      vertical-align: top;
+      border: none
+    }
+
+    .ci-table td:first-child {
+      font-weight: 600;
+      color: var(--text2);
+      white-space: nowrap;
+      min-width: 110px
+    }
+
+    .toc {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-bottom: 28px
+    }
+
+    .toc h2 {
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--text2);
+      margin-bottom: 10px
+    }
+
+    .toc ol {
+      padding-left: 20px
+    }
+
+    .toc li {
+      margin-bottom: 3px
+    }
+
+    .toc a {
+      color: var(--link);
+      text-decoration: none;
+      font-size: 14px
+    }
+
+    .toc a:hover {
+      text-decoration: underline
+    }
+
+    article {
+      margin-bottom: 44px;
+      scroll-margin-top: 76px
+    }
+
+    article h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding: 8px 0;
+      border-top: 2px solid var(--border)
+    }
+
+    article h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 18px 0 8px
+    }
+
+    p {
+      margin-bottom: 10px
+    }
+
+    p:last-child {
+      margin-bottom: 0
+    }
+
+    ul,
+    ol {
+      padding-left: 20px;
+      margin-bottom: 10px
+    }
+
+    li {
+      margin-bottom: 4px
+    }
+
+    .dt {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin: 14px 0;
+      display: block;
+      overflow-x: auto
+    }
+
+    .dt th {
+      background: var(--bg2);
+      font-weight: 600;
+      text-align: left;
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      white-space: nowrap
+    }
+
+    .dt td {
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      vertical-align: top
+    }
+
+    .dt tr:nth-child(even) td {
+      background: var(--bg2)
+    }
+
+    .legal-critical,
+    .legal-warning,
+    .legal-info,
+    .legal-correction {
+      border-left: 4px solid;
+      border-radius: 4px;
+      padding: 12px 14px;
+      margin: 14px 0;
+      font-size: 14px
+    }
+
+    .legal-critical {
+      background: var(--cb);
+      border-color: var(--cbr);
+      color: var(--cbt)
+    }
+
+    .legal-warning {
+      background: var(--wb);
+      border-color: var(--wbr);
+      color: var(--wbt)
+    }
+
+    .legal-info {
+      background: var(--ib);
+      border-color: var(--ibr);
+      color: var(--ibt)
+    }
+
+    .legal-correction {
+      background: var(--pb);
+      border-color: var(--pbr);
+      color: var(--pbt)
+    }
+
+    .legal-critical h3,
+    .legal-warning h3,
+    .legal-info h3,
+    .legal-correction h3 {
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      margin: 0 0 8px;
+      border: none;
+      padding: 0
+    }
+
+    #page-footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      font-size: 13px;
+      color: var(--text2)
+    }
+
+    .fi {
+      max-width: 800px;
+      margin: 0 auto
+    }
+
+    .fi h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px
+    }
+
+    .fg {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2px 12px;
+      margin-bottom: 16px
+    }
+
+    .fg dt {
+      font-weight: 600;
+      white-space: nowrap
+    }
+
+    .fg dd {
+      color: var(--text2)
+    }
+
+    .vh {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 12px
+    }
+
+    body.embed-mode #page-header,
+    body.embed-mode #page-footer {
+      display: none
+    }
+
+    body.embed-mode main {
+      padding-top: 14px
+    }
+
+    .hidden {
+      display: none !important
+    }
+
+    a {
+      color: var(--link)
+    }
+
+    a:hover {
+      color: var(--lhov)
+    }
+
+    strong {
+      font-weight: 600
+    }
+
+    @media(max-width:600px) {
+      #page-header {
+        padding: 10px 14px
+      }
+
+      main {
+        padding: 18px 14px 44px
+      }
+
+      article h2 {
+        font-size: 1.05rem
+      }
+
+      .fg {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="page-header">
+    <span class="logo-text">Dear Us</span>
+    <nav class="lang-sw" id="lsw">
+      <a href="?lang=ko" class="lang-btn" data-lang="ko">한국어</a>
+      <a href="?lang=en" class="lang-btn" data-lang="en">English</a>
+      <a href="?lang=es" class="lang-btn" data-lang="es">Español</a>
+      <a href="?lang=pt" class="lang-btn" data-lang="pt">Português</a>
+    </nav>
+  </header>
+  <div id="tr-banner" class="hidden">
+    <div style="max-width:800px;margin:0 auto">
+      <p>This is a translation provided for informational purposes only. In the event of any conflict between this
+        translation and the English text, the English text prevails.</p>
+      <p>이 번역은 정보 제공 목적으로만 제공됩니다;. 본 번역과 영문 원본 사이에 충돌이 있을 경우, 영문 원본이 우선합니다.</p>
+    </div>
+  </div>
+  <div id="doc-en" class="doc-lang">
+    <main>
+      <div class="doc-hdr">
+        <h1>Open Source Licenses</h1>
+        <p class="eff-date">Dear Us &mdash; Acknowledgements &amp; Third-Party Notices</p>
+      </div>
+
+      <article id="en-oss-intro">
+        <h2>Third-Party Software Notices</h2>
+        <p>Dear Us incorporates components from open-source software. We are grateful to the developers and maintainers
+          of these projects. The following notices are provided in accordance with the respective license terms.</p>
+      </article>
+
+      <article id="en-oss-mit">
+        <h2>MIT License</h2>
+        <p>The following components are distributed under the MIT License:</p>
+
+        <div class="legal-info">
+          <p><strong>React Native</strong> &mdash; Copyright (c) Meta Platforms, Inc. and affiliates.</p>
+          <p><strong>React</strong> &mdash; Copyright (c) Meta Platforms, Inc. and affiliates.</p>
+          <p><strong>Expo</strong> &mdash; Copyright (c) 650 Industries, Inc.</p>
+          <p><strong>React Navigation</strong> &mdash; Copyright (c) React Navigation contributors.</p>
+          <p><strong>Zustand</strong> &mdash; Copyright (c) Paul Henschel and contributors.</p>
+          <p><strong>Axios</strong> &mdash; Copyright (c) Matt Zabriskie &amp; Collaborators.</p>
+          <p><strong>date-fns</strong> &mdash; Copyright (c) Sasha Koss and Lesha Koss.</p>
+          <p><strong>Lodash</strong> &mdash; Copyright (c) JS Foundation and other contributors.</p>
+          <p><strong>React Query (TanStack Query)</strong> &mdash; Copyright (c) 2021-present Tanner Linsley.</p>
+          <p><strong>i18next</strong> &mdash; Copyright (c) 2022 i18next.</p>
+          <p><strong>React Native Reanimated</strong> &mdash; Copyright (c) Software Mansion.</p>
+          <p><strong>React Native Gesture Handler</strong> &mdash; Copyright (c) Software Mansion.</p>
+          <p><strong>React Native Safe Area Context</strong> &mdash; Copyright (c) Th&eacute;o Browne.</p>
+          <p><strong>React Native Screens</strong> &mdash; Copyright (c) Software Mansion.</p>
+          <p><strong>React Native MMKV</strong> &mdash; Copyright (c) Marc Rousavy.</p>
+          <p><strong>Lottie React Native</strong> &mdash; Copyright (c) Airbnb, Inc.</p>
+          <p><strong>React Native Image Picker</strong> &mdash; Copyright (c) Ivan Pusic.</p>
+          <p><strong>React Native Vector Icons</strong> &mdash; Copyright (c) Joel Arvidsson.</p>
+          <p><strong>Moment.js</strong> &mdash; Copyright (c) JS Foundation and other contributors.</p>
+          <p><strong>uuid</strong> &mdash; Copyright (c) Robert Kieffer and other contributors.</p>
+        </div>
+
+        <div class="legal-correction">
+          <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+            associated documentation files (the &ldquo;Software&rdquo;), to deal in the Software without restriction,
+            including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+            sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to
+            the following conditions: The above copyright notice and this permission notice shall be included in all
+            copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED &ldquo;AS IS&rdquo;, WITHOUT
+            WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+            LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+            ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </div>
+      </article>
+
+      <article id="en-oss-apache">
+        <h2>Apache License 2.0</h2>
+        <p>The following components are distributed under the Apache License, Version 2.0:</p>
+
+        <div class="legal-info">
+          <p><strong>React Native Firebase</strong> &mdash; Copyright (c) Invertase Limited.</p>
+          <p><strong>Expo Modules Core</strong> &mdash; Copyright (c) 650 Industries, Inc.</p>
+          <p><strong>React Native Paper</strong> &mdash; Copyright (c) Callstack.</p>
+          <p><strong>Google ML Kit</strong> (where applicable) &mdash; Copyright (c) Google LLC.</p>
+          <p><strong>OkHttp</strong> (Android, transitive) &mdash; Copyright (c) Square, Inc.</p>
+          <p><strong>Retrofit</strong> (Android, transitive) &mdash; Copyright (c) Square, Inc.</p>
+        </div>
+
+        <p>Licensed under the Apache License, Version 2.0 (the &ldquo;License&rdquo;); you may not use these files
+          except in compliance with the License. You may obtain a copy of the License at <a
+            href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>. Unless
+          required by applicable law or agreed to in writing, software distributed under the License is distributed on
+          an &ldquo;AS IS&rdquo; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</p>
+      </article>
+
+      <article id="en-oss-bsd">
+        <h2>BSD Licenses</h2>
+        <p>The following components are distributed under BSD 2-Clause or BSD 3-Clause licenses:</p>
+
+        <div class="legal-info">
+          <p><strong>Hermes JavaScript Engine</strong> (BSD 3-Clause) &mdash; Copyright (c) Meta Platforms, Inc. and
+            affiliates.</p>
+          <p><strong>Flipper</strong> (BSD 3-Clause) &mdash; Copyright (c) Meta Platforms, Inc. and affiliates.</p>
+          <p><strong>Boost</strong> (BSL-1.0, transitive) &mdash; Copyright Beman Dawes, David Abrahams.</p>
+        </div>
+      </article>
+
+      <article id="en-oss-isc">
+        <h2>ISC License</h2>
+        <div class="legal-info">
+          <p><strong>semver</strong> &mdash; Copyright (c) Isaac Z. Schlueter and Contributors.</p>
+          <p><strong>graceful-fs</strong> &mdash; Copyright (c) Isaac Z. Schlueter, Ben Noordhuis, and Contributors.</p>
+        </div>
+      </article>
+
+      <article id="en-oss-other">
+        <h2>Other Notices</h2>
+        <p><strong>Apple SDK / iOS Frameworks</strong>: Use of Apple&rsquo;s SDKs (Core Location, UserNotifications,
+          StoreKit, etc.) is governed by the Apple Developer Program License Agreement.</p>
+        <p><strong>Google Play Services / Android SDKs</strong>: Use of Google Play Services is governed by the Google
+          APIs Terms of Service.</p>
+        <p><strong>Firebase (Google LLC)</strong>: Governed by the Firebase Terms of Service at
+          firebase.google.com/terms.</p>
+        <p>For complete license texts or to obtain source code for GPL/LGPL components (if any), contact:
+          support@with-stan.com with subject &ldquo;Open Source Request&rdquo;.</p>
+      </article>
+    </main>
+  </div>
+  <footer id="page-footer">
+    <div class="fi">
+      <h3>WithStan</h3>
+      <dl class="fg">
+        <dt>대표 / Representative</dt>
+        <dd>현승환 (Hyun Seunghwan)</dd>
+        <dt>주소 / Address</dt>
+        <dd>서울특별시 강북구 노해로 23길 123, 5층 503호<br>503, 5F, 23-gil 123 Nohae-ro, Gangbuk-gu, Seoul, Republic of Korea</dd>
+        <dt>DPO / 위치정보관리체임자</dt>
+        <dd>Kim Minjeong &middot; dev@with-stan.com</dd>
+        <dt>개인정보 문의 / Privacy</dt>
+        <dd>privacy@with-stan.com</dd>
+        <dt>고객지원 / Support</dt>
+        <dd>support@with-stan.com</dd>
+      </dl>
+      <div class="vh">Version History: v1.0 &rarr; v1.1 &rarr; v2.1 (withdrawn) &rarr; v2.2 (Definitive) &rarr; v2.5
+        (current)</div>
+    </div>
+  </footer>
+  <script>(function () {
+      var p = new URLSearchParams(location.search), lang = p.get('lang') || 'en',
+        sup = ['ko', 'en', 'es', 'pt'], al = sup.includes(lang) ? lang : 'en', embed = p.get('embed') === 'true';
+      if (embed) document.body.classList.add('embed-mode');
+      document.querySelectorAll('.doc-lang').forEach(function (e) { e.classList.add('hidden') });
+      var d = document.getElementById('doc-' + al); if (d) d.classList.remove('hidden');
+      if (al !== 'en' && al !== 'ko') { var b = document.getElementById('tr-banner'); if (b) b.classList.remove('hidden'); }
+      document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === al) });
+      document.documentElement.lang = al;
+      var ml = document.getElementById('meta-lang'); if (ml) ml.setAttribute('content', al);
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault(); var nl = this.dataset.lang;
+          var np = new URLSearchParams(location.search); np.set('lang', nl);
+          if (embed) np.set('embed', 'true');
+          history.pushState({}, '', '?' + np.toString());
+          document.querySelectorAll('.doc-lang').forEach(function (e) { e.classList.add('hidden') });
+          var nd = document.getElementById('doc-' + nl); if (nd) nd.classList.remove('hidden');
+          var bn = document.getElementById('tr-banner');
+          if (bn) { if (nl !== 'en' && nl !== 'ko') bn.classList.remove('hidden'); else bn.classList.add('hidden'); }
+          document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === nl) });
+          document.documentElement.lang = nl; if (ml) ml.setAttribute('content', nl);
+        });
+      });
+    })();</script>
+</body>
+
+</html>

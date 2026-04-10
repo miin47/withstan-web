@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="legal-doc-type" content="marketing">
+  <meta name="legal-doc-version" content="2.5">
+  <meta id="meta-lang" name="legal-doc-lang" content="en">
+  <meta name="legal-effective-date" content="2026-04-07">
+  <title>Dear Us — Marketing Consent Terms v2.5</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg: #fff;
+      --bg2: #f7f8fc;
+      --text: #1c1c1e;
+      --text2: #555;
+      --border: #ddd;
+      --accent: #4f46e5;
+      --link: #2563eb;
+      --lhov: #1d4ed8;
+      --cb: #fff5f5;
+      --cbr: #e53e3e;
+      --cbt: #c53030;
+      --wb: #fffbeb;
+      --wbr: #d97706;
+      --wbt: #92400e;
+      --ib: #eff6ff;
+      --ibr: #3b82f6;
+      --ibt: #1e40af;
+      --pb: #f5f3ff;
+      --pbr: #7c3aed;
+      --pbt: #5b21b6
+    }
+
+    @media(prefers-color-scheme:dark) {
+      :root {
+        --bg: #1a1a1a;
+        --bg2: #252525;
+        --text: #e0e0e0;
+        --text2: #aaa;
+        --border: #3a3a3a;
+        --accent: #818cf8;
+        --link: #93c5fd;
+        --lhov: #bfdbfe;
+        --cb: #2d1b1b;
+        --cbr: #c53030;
+        --cbt: #fc8181;
+        --wb: #2d2514;
+        --wbr: #d97706;
+        --wbt: #fcd34d;
+        --ib: #1e2a3d;
+        --ibr: #3b82f6;
+        --ibt: #93c5fd;
+        --pb: #1e1835;
+        --pbr: #7c3aed;
+        --pbt: #c4b5fd
+      }
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden
+    }
+
+    #page-header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100
+    }
+
+    .logo-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.02em
+    }
+
+    .lang-sw {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap
+    }
+
+    .lang-btn {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--text2);
+      border: 1px solid var(--border);
+      background: var(--bg);
+      cursor: pointer;
+      transition: all .15s
+    }
+
+    .lang-btn:hover,
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent)
+    }
+
+    #tr-banner {
+      background: var(--wb);
+      border-bottom: 2px solid var(--wbr);
+      padding: 10px 20px;
+      font-size: 13px;
+      color: var(--wbt)
+    }
+
+    #tr-banner p+p {
+      margin-top: 4px
+    }
+
+    main {
+      padding: 28px 20px 60px;
+      max-width: 800px;
+      margin: 0 auto
+    }
+
+    .doc-hdr {
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border)
+    }
+
+    .doc-hdr h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      letter-spacing: -.02em
+    }
+
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text2);
+      margin-bottom: 14px
+    }
+
+    .ci-table {
+      font-size: 13px;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px
+    }
+
+    .ci-table td {
+      padding: 3px 8px 3px 0;
+      vertical-align: top;
+      border: none
+    }
+
+    .ci-table td:first-child {
+      font-weight: 600;
+      color: var(--text2);
+      white-space: nowrap;
+      min-width: 110px
+    }
+
+    .toc {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-bottom: 28px
+    }
+
+    .toc h2 {
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--text2);
+      margin-bottom: 10px
+    }
+
+    .toc ol {
+      padding-left: 20px
+    }
+
+    .toc li {
+      margin-bottom: 3px
+    }
+
+    .toc a {
+      color: var(--link);
+      text-decoration: none;
+      font-size: 14px
+    }
+
+    .toc a:hover {
+      text-decoration: underline
+    }
+
+    article {
+      margin-bottom: 44px;
+      scroll-margin-top: 76px
+    }
+
+    article h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding: 8px 0;
+      border-top: 2px solid var(--border)
+    }
+
+    article h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 18px 0 8px
+    }
+
+    p {
+      margin-bottom: 10px
+    }
+
+    p:last-child {
+      margin-bottom: 0
+    }
+
+    ul,
+    ol {
+      padding-left: 20px;
+      margin-bottom: 10px
+    }
+
+    li {
+      margin-bottom: 4px
+    }
+
+    .dt {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin: 14px 0;
+      display: block;
+      overflow-x: auto
+    }
+
+    .dt th {
+      background: var(--bg2);
+      font-weight: 600;
+      text-align: left;
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      white-space: nowrap
+    }
+
+    .dt td {
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      vertical-align: top
+    }
+
+    .dt tr:nth-child(even) td {
+      background: var(--bg2)
+    }
+
+    .legal-critical,
+    .legal-warning,
+    .legal-info,
+    .legal-correction {
+      border-left: 4px solid;
+      border-radius: 4px;
+      padding: 12px 14px;
+      margin: 14px 0;
+      font-size: 14px
+    }
+
+    .legal-critical {
+      background: var(--cb);
+      border-color: var(--cbr);
+      color: var(--cbt)
+    }
+
+    .legal-warning {
+      background: var(--wb);
+      border-color: var(--wbr);
+      color: var(--wbt)
+    }
+
+    .legal-info {
+      background: var(--ib);
+      border-color: var(--ibr);
+      color: var(--ibt)
+    }
+
+    .legal-correction {
+      background: var(--pb);
+      border-color: var(--pbr);
+      color: var(--pbt)
+    }
+
+    .legal-critical h3,
+    .legal-warning h3,
+    .legal-info h3,
+    .legal-correction h3 {
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      margin: 0 0 8px;
+      border: none;
+      padding: 0
+    }
+
+    #page-footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      font-size: 13px;
+      color: var(--text2)
+    }
+
+    .fi {
+      max-width: 800px;
+      margin: 0 auto
+    }
+
+    .fi h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px
+    }
+
+    .fg {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2px 12px;
+      margin-bottom: 16px
+    }
+
+    .fg dt {
+      font-weight: 600;
+      white-space: nowrap
+    }
+
+    .fg dd {
+      color: var(--text2)
+    }
+
+    .vh {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 12px
+    }
+
+    body.embed-mode #page-header,
+    body.embed-mode #page-footer {
+      display: none
+    }
+
+    body.embed-mode main {
+      padding-top: 14px
+    }
+
+    .hidden {
+      display: none !important
+    }
+
+    a {
+      color: var(--link)
+    }
+
+    a:hover {
+      color: var(--lhov)
+    }
+
+    strong {
+      font-weight: 600
+    }
+
+    @media(max-width:600px) {
+      #page-header {
+        padding: 10px 14px
+      }
+
+      main {
+        padding: 18px 14px 44px
+      }
+
+      article h2 {
+        font-size: 1.05rem
+      }
+
+      .fg {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="page-header">
+    <span class="logo-text">Dear Us</span>
+    <nav class="lang-sw" id="lsw">
+      <a href="?lang=ko" class="lang-btn" data-lang="ko">한국어</a>
+      <a href="?lang=en" class="lang-btn" data-lang="en">English</a>
+      <a href="?lang=es" class="lang-btn" data-lang="es">Español</a>
+      <a href="?lang=pt" class="lang-btn" data-lang="pt">Português</a>
+    </nav>
+  </header>
+  <div id="tr-banner" class="hidden">
+    <div style="max-width:800px;margin:0 auto">
+      <p>This is a translation provided for informational purposes only. In the event of any conflict between this
+        translation and the English text, the English text prevails.</p>
+      <p>이 번역은 정보 제공 목적으로만 제공됩니다;. 본 번역과 영문 원본 사이에 충돌이 있을 경우, 영문 원본이 우선합니다.</p>
+    </div>
+  </div>
+  <div id="doc-en" class="doc-lang">
+    <main>
+      <div class="doc-hdr">
+        <h1>Marketing Consent Terms</h1>
+        <p class="eff-date">Effective: April 7, 2026 &bull; Version 2.5</p>
+      </div>
+
+      <article id="en-m1">
+        <h2>1. What This Consent Covers</h2>
+        <p>By providing your marketing consent, you agree to receive promotional communications from Dear Us / WithStan,
+          including:</p>
+        <ul>
+          <li>New feature announcements and app updates</li>
+          <li>Promotions, special events, and limited-time offers</li>
+          <li>Content recommendations and personalized highlights (e.g., favorite artists&rsquo; activities)</li>
+          <li>Community news and curated fan content digests</li>
+          <li>Surveys and user research invitations</li>
+        </ul>
+        <div class="legal-info">
+          <p>Marketing consent is <strong>entirely optional</strong> and separate from the Terms of Service. Withholding
+            or withdrawing marketing consent has no effect on your ability to use Dear Us.</p>
+        </div>
+      </article>
+
+      <article id="en-m2">
+        <h2>2. How We Send Marketing Communications</h2>
+        <p>We may send marketing communications via:</p>
+        <ul>
+          <li><strong>Push notifications</strong> &mdash; in-app notifications (requires separate push notification
+            permission on your device)</li>
+          <li><strong>In-app messages</strong> &mdash; banners or modals shown when you open the app</li>
+          <li><strong>Email</strong> &mdash; only if you have provided and verified your email address</li>
+        </ul>
+        <p>We do not send SMS or physical mail for marketing purposes.</p>
+      </article>
+
+      <article id="en-m3">
+        <h2>3. Frequency and Opt-Out</h2>
+        <p>We aim to send no more than 2&ndash;4 marketing messages per week. You can adjust or withdraw your consent at
+          any time:</p>
+        <ul>
+          <li><strong>In-app:</strong> Settings &rarr; Notifications &rarr; Marketing</li>
+          <li><strong>Email:</strong> Click the &ldquo;Unsubscribe&rdquo; link in any marketing email</li>
+          <li><strong>Contact:</strong> Email support@with-stan.com with subject &ldquo;Unsubscribe&rdquo;</li>
+        </ul>
+        <p>Withdrawal of consent takes effect within 3 business days. You will continue to receive transactional and
+          service-related messages (e.g., security alerts, account notices) regardless of marketing consent status.</p>
+      </article>
+
+      <article id="en-m4">
+        <h2>4. Legal Basis</h2>
+        <p>Marketing communications are sent solely on the basis of your freely given, specific, informed, and
+          unambiguous consent under applicable law (GDPR Art. 6(1)(a); Korea PIPA; CAN-SPAM / CASL where applicable).
+          Consent records, including the timestamp and method of consent, are stored securely and available to you on
+          request.</p>
+      </article>
+
+      <article id="en-m5">
+        <h2>5. Contact</h2>
+        <p>Marketing opt-out or consent-record requests: support@with-stan.com</p>
+      </article>
+    </main>
+  </div>
+  <div id="doc-ko" class="doc-lang hidden">
+    <main>
+      <div class="doc-hdr">
+        <h1>마케팅 수신 동의</h1>
+        <p class="eff-date">시행일: 2026년 4월 7일 &bull; 버전 2.5</p>
+      </div>
+
+      <article id="ko-m1">
+        <h2>1. 동의 범위</h2>
+        <p>마케팅 수신에 동의하시면 Dear Us / WithStan의 다음 홍보 커뮤니케이션을 수신하게 됩니다:</p>
+        <ul>
+          <li>신규 기능 안내 및 앱 업데이트</li>
+          <li>프로모션, 특별 이벤트, 기간 한정 혜택</li>
+          <li>콘텐츠 추천 및 개인화 하이라이트 (예: 즐겨찾는 아티스트 활동)</li>
+          <li>커뮤니티 소식 및 팬 콘텐츠 요약</li>
+          <li>설문조사 및 사용자 리서치 초대</li>
+        </ul>
+        <div class="legal-info">
+          <p>마케팅 수신 동의는 <strong>완전히 선택 사항</strong>이며 이용약관과 별개입니다. 동의를 거부하거나 철회해도 Dear Us 이용에 아무런 영향이 없습니다.</p>
+        </div>
+      </article>
+
+      <article id="ko-m2">
+        <h2>2. 발송 방법</h2>
+        <p>다음 채널을 통해 마케팅 커뮤니케이션을 발송할 수 있습니다:</p>
+        <ul>
+          <li><strong>푸시 알림</strong> &mdash; 앱 내 알림 (기기의 별도 푸시 알림 권한 필요)</li>
+          <li><strong>인앱 메시지</strong> &mdash; 앱 열 때 표시되는 배너 또는 모달</li>
+          <li><strong>이메일</strong> &mdash; 이메일 주소를 제공 및 인증한 경우에만</li>
+        </ul>
+        <p>마케팅 목적으로 SMS 또는 우편을 발송하지 않습니다.</p>
+      </article>
+
+      <article id="ko-m3">
+        <h2>3. 발송 빈도 및 수신 거부</h2>
+        <p>주 2~4회 이하의 마케팅 메시지 발송을 목표로 합니다. 언제든지 동의를 조정하거나 철회할 수 있습니다:</p>
+        <ul>
+          <li><strong>앱 내:</strong> 설정 &rarr; 알림 &rarr; 마케팅</li>
+          <li><strong>이메일:</strong> 마케팅 이메일의 '수신 거부' 링크 클릭</li>
+          <li><strong>연락:</strong> 제목 '수신거부'로 support@with-stan.com 이메일 발송</li>
+        </ul>
+        <p>동의 철회는 3 영업일 이내에 적용됩니다. 마케팅 동의 여부에 관계없이 거래 및 서비스 관련 메시지(보안 알림, 계정 공지 등)는 계속 수신됩니다.</p>
+      </article>
+
+      <article id="ko-m4">
+        <h2>4. 법적 근거</h2>
+        <p>마케팅 커뮤니케이션은 자유롭게 제공된 명확한 동의에 기반하여 발송됩니다(개인정보 보호법, GDPR 제6조1항(a) 등 해당 법률). 동의 기록(타임스탬프 및 방법 포함)은 안전하게 보관되며 요청
+          시 확인 가능합니다.</p>
+      </article>
+
+      <article id="ko-m5">
+        <h2>5. 문의</h2>
+        <p>마케팅 수신 거부 또는 동의 기록 요청: support@with-stan.com</p>
+      </article>
+    </main>
+  </div>
+  <div id="doc-es" class="doc-lang hidden">
+    <main>
+      <div class="doc-hdr">
+        <h1>Términos de Consentimiento de Marketing</h1>
+        <p class="eff-date">Vigente: 7 de abril de 2026 &bull; Versión 2.5</p>
+      </div>
+
+      <article id="es-m1">
+        <h2>1. Alcance del Consentimiento</h2>
+        <p>Al proporcionar tu consentimiento de marketing, aceptas recibir comunicaciones promocionales de Dear Us /
+          WithStan, incluyendo: anuncios de nuevas funciones, promociones, eventos especiales, recomendaciones de
+          contenido personalizado, noticias de la comunidad e invitaciones a encuestas.</p>
+        <div class="legal-info">
+          <p>El consentimiento de marketing es <strong>completamente opcional</strong> y separado de los Términos de
+            Servicio. Retirarlo no afecta tu capacidad de usar Dear Us.</p>
+        </div>
+      </article>
+
+      <article id="es-m2">
+        <h2>2. Canales de Comunicación</h2>
+        <p>Enviamos comunicaciones de marketing a través de: notificaciones push (requiere permiso en el dispositivo),
+          mensajes dentro de la app y correo electrónico (solo si has proporcionado y verificado tu dirección). No
+          enviamos SMS ni correo físico con fines de marketing.</p>
+      </article>
+
+      <article id="es-m3">
+        <h2>3. Frecuencia y Cancelación</h2>
+        <p>Enviamos un máximo de 2 a 4 mensajes de marketing por semana. Puedes retirar tu consentimiento en cualquier
+          momento desde: Configuración &rarr; Notificaciones &rarr; Marketing, o haciendo clic en &ldquo;Cancelar
+          suscripción&rdquo; en cualquier correo de marketing. El retiro del consentimiento es efectivo en 3 días
+          hábiles.</p>
+      </article>
+
+      <article id="es-m4">
+        <h2>4. Base Legal</h2>
+        <p>Las comunicaciones de marketing se envían únicamente sobre la base de tu consentimiento libre, específico,
+          informado e inequívoco (RGPD Art. 6(1)(a); Ley PIPA de Corea; CAN-SPAM / CASL según corresponda). Los
+          registros de consentimiento están disponibles a tu solicitud.</p>
+      </article>
+
+      <article id="es-m5">
+        <h2>5. Contacto</h2>
+        <p>Cancelación de suscripción o solicitudes de registro de consentimiento: support@with-stan.com</p>
+      </article>
+    </main>
+  </div>
+  <div id="doc-pt" class="doc-lang hidden">
+    <main>
+      <div class="doc-hdr">
+        <h1>Termos de Consentimento de Marketing</h1>
+        <p class="eff-date">Vigência: 7 de abril de 2026 &bull; Versão 2.5</p>
+      </div>
+
+      <article id="pt-m1">
+        <h2>1. Escopo do Consentimento</h2>
+        <p>Ao fornecer seu consentimento de marketing, você concorda em receber comunicações promocionais do Dear Us /
+          WithStan, incluindo: anúncios de novos recursos, promoções, eventos especiais, recomendações de conteúdo
+          personalizado, notícias da comunidade e convites para pesquisas.</p>
+        <div class="legal-info">
+          <p>O consentimento de marketing é <strong>completamente opcional</strong> e separado dos Termos de Serviço.
+            Retirá-lo não afeta sua capacidade de usar o Dear Us.</p>
+        </div>
+      </article>
+
+      <article id="pt-m2">
+        <h2>2. Canais de Comunicação</h2>
+        <p>Enviamos comunicações de marketing por meio de: notificações push (requer permissão no dispositivo),
+          mensagens dentro do app e e-mail (somente se você forneceu e verificou seu endereço). Não enviamos SMS ou
+          correspondência física para fins de marketing.</p>
+      </article>
+
+      <article id="pt-m3">
+        <h2>3. Frequência e Cancelamento</h2>
+        <p>Enviamos no máximo 2 a 4 mensagens de marketing por semana. Você pode retirar seu consentimento a qualquer
+          momento em: Configurações &rarr; Notificações &rarr; Marketing, ou clicando em &ldquo;Cancelar
+          assinatura&rdquo; em qualquer e-mail de marketing. A retirada do consentimento entra em vigor em 3 dias úteis.
+        </p>
+      </article>
+
+      <article id="pt-m4">
+        <h2>4. Base Legal</h2>
+        <p>As comunicações de marketing são enviadas exclusivamente com base no seu consentimento livre, específico,
+          informado e inequívoco (RGPD Art. 6(1)(a); Lei PIPA da Coreia; CAN-SPAM / CASL conforme aplicável). Os
+          registros de consentimento estão disponíveis mediante solicitação.</p>
+      </article>
+
+      <article id="pt-m5">
+        <h2>5. Contato</h2>
+        <p>Cancelamento de assinatura ou solicitações de registro de consentimento: support@with-stan.com</p>
+      </article>
+    </main>
+  </div>
+  <footer id="page-footer">
+    <div class="fi">
+      <h3>WithStan</h3>
+      <dl class="fg">
+        <dt>대표 / Representative</dt>
+        <dd>현승환 (Hyun Seunghwan)</dd>
+        <dt>주소 / Address</dt>
+        <dd>서울특별시 강북구 노해로 23길 123, 5층 503호<br>503, 5F, 23-gil 123 Nohae-ro, Gangbuk-gu, Seoul, Republic of Korea</dd>
+        <dt>DPO / 위치정보관리체임자</dt>
+        <dd>Kim Minjeong &middot; dev@with-stan.com</dd>
+        <dt>개인정보 문의 / Privacy</dt>
+        <dd>privacy@with-stan.com</dd>
+        <dt>고객지원 / Support</dt>
+        <dd>support@with-stan.com</dd>
+      </dl>
+      <div class="vh">Version History: v1.0 &rarr; v1.1 &rarr; v2.1 (withdrawn) &rarr; v2.2 (Definitive) &rarr; v2.5
+        (current)</div>
+    </div>
+  </footer>
+  <script>(function () {
+      var p = new URLSearchParams(location.search), lang = p.get('lang') || 'ko',
+        sup = ['ko', 'en', 'es', 'pt'], al = sup.includes(lang) ? lang : 'en', embed = p.get('embed') === 'true';
+      if (embed) document.body.classList.add('embed-mode');
+      document.querySelectorAll('.doc-lang').forEach(function (e) { e.classList.add('hidden') });
+      var d = document.getElementById('doc-' + al); if (d) d.classList.remove('hidden');
+      if (al !== 'en' && al !== 'ko') { var b = document.getElementById('tr-banner'); if (b) b.classList.remove('hidden'); }
+      document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === al) });
+      document.documentElement.lang = al;
+      var ml = document.getElementById('meta-lang'); if (ml) ml.setAttribute('content', al);
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault(); var nl = this.dataset.lang;
+          var np = new URLSearchParams(location.search); np.set('lang', nl);
+          if (embed) np.set('embed', 'true');
+          history.pushState({}, '', '?' + np.toString());
+          document.querySelectorAll('.doc-lang').forEach(function (e) { e.classList.add('hidden') });
+          var nd = document.getElementById('doc-' + nl); if (nd) nd.classList.remove('hidden');
+          var bn = document.getElementById('tr-banner');
+          if (bn) { if (nl !== 'en' && nl !== 'ko') bn.classList.remove('hidden'); else bn.classList.add('hidden'); }
+          document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === nl) });
+          document.documentElement.lang = nl; if (ml) ml.setAttribute('content', nl);
+        });
+      });
+    })();</script>
+</body>
+
+</html>

@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="legal-doc-type" content="privacy">
+  <meta name="legal-doc-version" content="2.5">
+  <meta id="meta-lang" name="legal-doc-lang" content="en">
+  <meta name="legal-effective-date" content="2026-04-07">
+  <title>Dear Us — Privacy Policy v2.5</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg: #fff;
+      --bg2: #f7f8fc;
+      --text: #1c1c1e;
+      --text2: #555;
+      --border: #ddd;
+      --accent: #4f46e5;
+      --link: #2563eb;
+      --lhov: #1d4ed8;
+      --cb: #fff5f5;
+      --cbr: #e53e3e;
+      --cbt: #c53030;
+      --wb: #fffbeb;
+      --wbr: #d97706;
+      --wbt: #92400e;
+      --ib: #eff6ff;
+      --ibr: #3b82f6;
+      --ibt: #1e40af;
+      --pb: #f5f3ff;
+      --pbr: #7c3aed;
+      --pbt: #5b21b6
+    }
+
+    @media(prefers-color-scheme:dark) {
+      :root {
+        --bg: #1a1a1a;
+        --bg2: #252525;
+        --text: #e0e0e0;
+        --text2: #aaa;
+        --border: #3a3a3a;
+        --accent: #818cf8;
+        --link: #93c5fd;
+        --lhov: #bfdbfe;
+        --cb: #2d1b1b;
+        --cbr: #c53030;
+        --cbt: #fc8181;
+        --wb: #2d2514;
+        --wbr: #d97706;
+        --wbt: #fcd34d;
+        --ib: #1e2a3d;
+        --ibr: #3b82f6;
+        --ibt: #93c5fd;
+        --pb: #1e1835;
+        --pbr: #7c3aed;
+        --pbt: #c4b5fd
+      }
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden
+    }
+
+    #page-header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100
+    }
+
+    .logo-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -.02em
+    }
+
+    .lang-sw {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap
+    }
+
+    .lang-btn {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--text2);
+      border: 1px solid var(--border);
+      background: var(--bg);
+      cursor: pointer;
+      transition: all .15s
+    }
+
+    .lang-btn:hover,
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent)
+    }
+
+    #tr-banner {
+      background: var(--wb);
+      border-bottom: 2px solid var(--wbr);
+      padding: 10px 20px;
+      font-size: 13px;
+      color: var(--wbt)
+    }
+
+    #tr-banner p+p {
+      margin-top: 4px
+    }
+
+    main {
+      padding: 28px 20px 60px;
+      max-width: 800px;
+      margin: 0 auto
+    }
+
+    .doc-hdr {
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border)
+    }
+
+    .doc-hdr h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      letter-spacing: -.02em
+    }
+
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text2);
+      margin-bottom: 14px
+    }
+
+    .ci-table {
+      font-size: 13px;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px
+    }
+
+    .ci-table td {
+      padding: 3px 8px 3px 0;
+      vertical-align: top;
+      border: none
+    }
+
+    .ci-table td:first-child {
+      font-weight: 600;
+      color: var(--text2);
+      white-space: nowrap;
+      min-width: 110px
+    }
+
+    .toc {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-bottom: 28px
+    }
+
+    .toc h2 {
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--text2);
+      margin-bottom: 10px
+    }
+
+    .toc ol {
+      padding-left: 20px
+    }
+
+    .toc li {
+      margin-bottom: 3px
+    }
+
+    .toc a {
+      color: var(--link);
+      text-decoration: none;
+      font-size: 14px
+    }
+
+    .toc a:hover {
+      text-decoration: underline
+    }
+
+    article {
+      margin-bottom: 44px;
+      scroll-margin-top: 76px
+    }
+
+    article h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding: 8px 0;
+      border-top: 2px solid var(--border)
+    }
+
+    article h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 18px 0 8px
+    }
+
+    p {
+      margin-bottom: 10px
+    }
+
+    p:last-child {
+      margin-bottom: 0
+    }
+
+    ul,
+    ol {
+      padding-left: 20px;
+      margin-bottom: 10px
+    }
+
+    li {
+      margin-bottom: 4px
+    }
+
+    .dt {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin: 14px 0;
+      display: block;
+      overflow-x: auto
+    }
+
+    .dt th {
+      background: var(--bg2);
+      font-weight: 600;
+      text-align: left;
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      white-space: nowrap
+    }
+
+    .dt td {
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      vertical-align: top
+    }
+
+    .dt tr:nth-child(even) td {
+      background: var(--bg2)
+    }
+
+    .legal-critical,
+    .legal-warning,
+    .legal-info,
+    .legal-correction {
+      border-left: 4px solid;
+      border-radius: 4px;
+      padding: 12px 14px;
+      margin: 14px 0;
+      font-size: 14px
+    }
+
+    .legal-critical {
+      background: var(--cb);
+      border-color: var(--cbr);
+      color: var(--cbt)
+    }
+
+    .legal-warning {
+      background: var(--wb);
+      border-color: var(--wbr);
+      color: var(--wbt)
+    }
+
+    .legal-info {
+      background: var(--ib);
+      border-color: var(--ibr);
+      color: var(--ibt)
+    }
+
+    .legal-correction {
+      background: var(--pb);
+      border-color: var(--pbr);
+      color: var(--pbt)
+    }
+
+    .legal-critical h3,
+    .legal-warning h3,
+    .legal-info h3,
+    .legal-correction h3 {
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      margin: 0 0 8px;
+      border: none;
+      padding: 0
+    }
+
+    #page-footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      font-size: 13px;
+      color: var(--text2)
+    }
+
+    .fi {
+      max-width: 800px;
+      margin: 0 auto
+    }
+
+    .fi h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px
+    }
+
+    .fg {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2px 12px;
+      margin-bottom: 16px
+    }
+
+    .fg dt {
+      font-weight: 600;
+      white-space: nowrap
+    }
+
+    .fg dd {
+      color: var(--text2)
+    }
+
+    .vh {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 12px
+    }
+
+    body.embed-mode #page-header,
+    body.embed-mode #page-footer {
+      display: none
+    }
+
+    body.embed-mode main {
+      padding-top: 14px
+    }
+
+    .hidden {
+      display: none !important
+    }
+
+    a {
+      color: var(--link)
+    }
+
+    a:hover {
+      color: var(--lhov)
+    }
+
+    strong {
+      font-weight: 600
+    }
+
+    @media(max-width:600px) {
+      #page-header {
+        padding: 10px 14px
+      }
+
+      main {
+        padding: 18px 14px 44px
+      }
+
+      article h2 {
+        font-size: 1.05rem
+      }
+
+      .fg {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="page-header">
+    <span class="logo-text">Dear Us</span>
+    <nav class="lang-sw" id="lsw">
+      <a href="?lang=ko" class="lang-btn" data-lang="ko">한국어</a>
+      <a href="?lang=en" class="lang-btn" data-lang="en">English</a>
+      <a href="?lang=es" class="lang-btn" data-lang="es">Español</a>
+      <a href="?lang=pt" class="lang-btn" data-lang="pt">Português</a>
+    </nav>
+  </header>
+  <div id="tr-banner" class="hidden">
+    <div style="max-width:800px;margin:0 auto">
+      <p>This is a translation provided for informational purposes only. In the event of any conflict between this
+        translation and the English text, the English text prevails.</p>
+      <p>이 번역은 정보 제공 목적으로만 제공됩니다;. 본 번역과 영문 원본 사이에 충돌이 있을 경우, 영문 원본이 우선합니다.</p>
+    </div>
+  </div>
+  <div id="doc-en" class="doc-lang">
+    <main>
+      <div class="doc-hdr">
+        <h1>Privacy Policy</h1>
+        <p class="eff-date">Effective: April 7, 2026 &bull; Version 2.5</p>
+        <nav class="toc"><strong>Contents</strong>
+          <ol>
+            <li><a href="#en-p1">Controller &amp; Contact</a></li>
+            <li><a href="#en-p2">Data We Collect</a></li>
+            <li><a href="#en-p3">How We Use Data</a></li>
+            <li><a href="#en-p4">Retention &amp; Deletion</a></li>
+            <li><a href="#en-p5">Sharing &amp; Third Parties</a></li>
+            <li><a href="#en-p6">International Transfers</a></li>
+            <li><a href="#en-p7">Your Rights</a></li>
+            <li><a href="#en-p8">Children</a></li>
+            <li><a href="#en-p9">Policy Changes</a></li>
+            <li><a href="#en-p10">Contact &amp; Requests</a></li>
+          </ol>
+        </nav>
+      </div>
+
+      <article id="en-p1">
+        <h2>1. Controller and Contact Information</h2>
+        <p><strong>Service name:</strong> Dear Us &mdash; operated by WithStan (individual operator, Republic of Korea).
+        </p>
+        <p><strong>Email:</strong> support@with-stan.com &nbsp;|&nbsp; <strong>Privacy inquiries:</strong>
+          privacy@with-stan.com</p>
+        <p>Because Dear Us is operated by a single individual, the operator&rsquo;s identity is not publicly disclosed
+          on this page. If required by applicable law or court order, the operator&rsquo;s full identity will be
+          disclosed to the relevant authorities.</p>
+      </article>
+
+      <article id="en-p2">
+        <h2>2. Data We Collect</h2>
+        <h3>2.1 Data You Provide</h3>
+        <ul>
+          <li><strong>Account data:</strong> username (required), profile photo (optional), bio (optional), preferred
+            language.</li>
+          <li><strong>Content data:</strong> posts, comments, likes, fan-club messages, media uploads.</li>
+          <li><strong>Communication data:</strong> support emails, appeal submissions, user reports.</li>
+        </ul>
+        <h3>2.2 Data Collected Automatically</h3>
+        <ul>
+          <li><strong>Device &amp; technical data:</strong> device OS and version, app version, device token (for push
+            notifications), time zone, locale.</li>
+          <li><strong>Usage data:</strong> pages visited, features used, session duration, interaction timestamps.</li>
+          <li><strong>Crash &amp; diagnostics:</strong> anonymized error logs to improve stability.</li>
+        </ul>
+        <h3>2.3 Optional Data (Requires Explicit Consent)</h3>
+        <ul>
+          <li><strong>Precise location:</strong> used only when you enable &ldquo;Nearby Stans&rdquo;; not stored on
+            servers.</li>
+          <li><strong>Approximate location (region):</strong> derived from IP address for content localization; not
+            stored at the country subdivision level.</li>
+          <li><strong>Birthday:</strong> optional field used for age-restricted features and personalized greetings.
+          </li>
+          <li><strong>Marketing consent:</strong> collected as a separate, optional consent.</li>
+        </ul>
+        <div class="legal-info">
+          <p>We do not collect payment card data. All in-app purchases are processed solely by Apple (App Store) or
+            Google (Google Play) under their respective privacy policies.</p>
+        </div>
+      </article>
+
+      <article id="en-p3">
+        <h2>3. How We Use Your Data</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Purpose</th>
+              <th>Legal Basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Provide and operate the Service (account creation, content display, fan clubs)</td>
+              <td>Contract performance</td>
+            </tr>
+            <tr>
+              <td>Send push notifications you have opted into</td>
+              <td>Consent</td>
+            </tr>
+            <tr>
+              <td>Detect and prevent abuse, spam, and illegal content</td>
+              <td>Legitimate interest / Legal obligation</td>
+            </tr>
+            <tr>
+              <td>Respond to support requests and appeals</td>
+              <td>Contract performance / Legitimate interest</td>
+            </tr>
+            <tr>
+              <td>Improve service stability via anonymized diagnostics</td>
+              <td>Legitimate interest</td>
+            </tr>
+            <tr>
+              <td>Comply with legal obligations (court orders, government requests)</td>
+              <td>Legal obligation</td>
+            </tr>
+            <tr>
+              <td>Send marketing communications (newsletters, promotions)</td>
+              <td>Consent (separate)</td>
+            </tr>
+            <tr>
+              <td>Personalize content for your region</td>
+              <td>Legitimate interest</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>We do not use your data for automated decision-making or profiling that produces legal or similarly
+          significant effects.</p>
+      </article>
+
+      <article id="en-p4">
+        <h2>4. Data Retention and Deletion</h2>
+        <ul>
+          <li><strong>Active account:</strong> data retained while your account is active.</li>
+          <li><strong>After deletion request:</strong> 90-day grace period during which you may restore your account.
+            After 90 days, personal data is permanently deleted from production systems.</li>
+          <li><strong>Backups:</strong> deleted from rotating backups within 30 days after production deletion.</li>
+          <li><strong>Legal hold:</strong> if a legal obligation or ongoing investigation requires retention, data may
+            be held beyond the standard schedule. You will be notified to the extent permitted by law.</li>
+          <li><strong>Anonymous analytics:</strong> aggregated, non-identifiable analytics data may be retained
+            indefinitely.</li>
+          <li><strong>Support communications:</strong> retained for 3 years from the last interaction for
+            abuse-prevention purposes.</li>
+        </ul>
+        <div class="legal-critical">
+          <p><strong>Account deletion is irreversible after 90 days.</strong> Exported data packages may be requested
+            before deletion via privacy@with-stan.com.</p>
+        </div>
+      </article>
+
+      <article id="en-p5">
+        <h2>5. Sharing and Third-Party Services</h2>
+        <p>We <strong>do not sell</strong> your personal data. We share data only in the following circumstances:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Recipient</th>
+              <th>Data Shared</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cloud infrastructure provider (AWS or equivalent)</td>
+              <td>All user-generated content and account data</td>
+              <td>Hosting and storage</td>
+            </tr>
+            <tr>
+              <td>Push notification services (APNs / FCM)</td>
+              <td>Device token, notification payload</td>
+              <td>Deliver push notifications</td>
+            </tr>
+            <tr>
+              <td>Analytics provider (anonymized)</td>
+              <td>Aggregated usage events, no PII</td>
+              <td>App performance analytics</td>
+            </tr>
+            <tr>
+              <td>Legal authorities</td>
+              <td>Data required by law or court order</td>
+              <td>Legal compliance</td>
+            </tr>
+            <tr>
+              <td>Successor entity in a merger or acquisition</td>
+              <td>Full dataset under confidentiality agreement</td>
+              <td>Business continuity</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>All third-party processors are bound by data processing agreements requiring them to protect your data in
+          accordance with applicable law.</p>
+      </article>
+
+      <article id="en-p6">
+        <h2>6. International Data Transfers</h2>
+        <p>Dear Us is operated from the Republic of Korea. Your data may be processed on servers located in South Korea,
+          the United States, or the European Union, depending on the infrastructure provider.</p>
+        <p>Transfers to countries outside the EEA are protected by:</p>
+        <ul>
+          <li>Standard Contractual Clauses (SCCs) approved by the European Commission, or</li>
+          <li>Adequacy decisions where applicable.</li>
+        </ul>
+        <p>Users in South Korea: data is processed under the Personal Information Protection Act (PIPA). Users in the
+          EEA/UK: data is processed under GDPR/UK GDPR.</p>
+      </article>
+
+      <article id="en-p7">
+        <h2>7. Your Rights</h2>
+        <p>Depending on your jurisdiction, you may have the right to:</p>
+        <ul>
+          <li><strong>Access</strong> your personal data (data portability export).</li>
+          <li><strong>Correct</strong> inaccurate data.</li>
+          <li><strong>Delete</strong> your account and associated data.</li>
+          <li><strong>Restrict</strong> processing in certain circumstances.</li>
+          <li><strong>Object</strong> to processing based on legitimate interests.</li>
+          <li><strong>Withdraw consent</strong> at any time (does not affect prior processing).</li>
+          <li><strong>Lodge a complaint</strong> with a supervisory authority.</li>
+        </ul>
+        <p>To exercise these rights, email privacy@with-stan.com. We will respond within 30 calendar days. Identity
+          verification may be required.</p>
+        <div class="legal-info">
+          <p><strong>South Korean users:</strong> additional rights are available under the Personal Information
+            Protection Act. Contact the Personal Information Protection Commission (PIPC) at www.pipc.go.kr if you
+            believe your rights have been violated.</p>
+        </div>
+      </article>
+
+      <article id="en-p8">
+        <h2>8. Children&rsquo;s Privacy</h2>
+        <p>The Service is not directed to children under the age of 14 (or the higher age limit required by local law).
+          We do not knowingly collect personal data from children. If we learn that personal data of a child under 14
+          has been collected, we will delete it promptly.</p>
+        <p>If you believe a child has registered, contact privacy@with-stan.com immediately.</p>
+      </article>
+
+      <article id="en-p9">
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy periodically. Material changes will be communicated via:</p>
+        <ul>
+          <li>In-app notification at least 7 days before the change takes effect, or</li>
+          <li>Email notification to registered users, if applicable.</li>
+        </ul>
+        <p>Continued use of the Service after the effective date constitutes acceptance of the revised policy. If you do
+          not agree, you may delete your account.</p>
+      </article>
+
+      <article id="en-p10">
+        <h2>10. Contact and Data Requests</h2>
+        <p><strong>General support:</strong> support@with-stan.com</p>
+        <p><strong>Privacy requests (access, deletion, portability):</strong> privacy@with-stan.com</p>
+        <p><strong>Response time:</strong> 30 calendar days for privacy requests; 7 business days for general support.
+        </p>
+        <p>Requests must include: your username, registered email, and a description of your request. We may ask for
+          additional verification to protect your account.</p>
+      </article>
+    </main>
+  </div>
+  <div id="doc-ko" class="doc-lang hidden">
+    <main>
+      <div class="doc-hdr">
+        <h1>개인정보 처리방침</h1>
+        <p class="eff-date">시행일: 2026년 4월 7일 &bull; 버전 2.5</p>
+        <nav class="toc"><strong>목차</strong>
+          <ol>
+            <li><a href="#ko-p1">처리자 및 연락처</a></li>
+            <li><a href="#ko-p2">수집하는 정보</a></li>
+            <li><a href="#ko-p3">이용 목적</a></li>
+            <li><a href="#ko-p4">보유 및 삭제</a></li>
+            <li><a href="#ko-p5">제3자 제공</a></li>
+            <li><a href="#ko-p6">국외 이전</a></li>
+            <li><a href="#ko-p7">이용자 권리</a></li>
+            <li><a href="#ko-p8">아동 보호</a></li>
+            <li><a href="#ko-p9">방침 변경</a></li>
+            <li><a href="#ko-p10">문의 및 요청</a></li>
+          </ol>
+        </nav>
+      </div>
+
+      <article id="ko-p1">
+        <h2>1. 정보처리자 및 연락처</h2>
+        <p><strong>서비스명:</strong> Dear Us &mdash; WithStan 운영 (개인 사업자, 대한민국)</p>
+        <p><strong>이메일:</strong> support@with-stan.com &nbsp;|&nbsp; <strong>개인정보 문의:</strong> privacy@with-stan.com</p>
+        <p>Dear Us는 개인 사업자가 운영합니다. 운영자의 신원정보는 본 페이지에 공개되지 않으나, 법적 의무 또는 법원 명령에 따라 관련 기관에 공유됩니다.</p>
+      </article>
+
+      <article id="ko-p2">
+        <h2>2. 수집하는 개인정보</h2>
+        <h3>2.1 이용자가 제공하는 정보</h3>
+        <ul>
+          <li><strong>계정 정보:</strong> 닉네임(필수), 프로필 사진(선택), 자기소개(선택), 선호 언어</li>
+          <li><strong>콘텐츠 정보:</strong> 게시물, 댓글, 좋아요, 팬클럽 메시지, 미디어 업로드</li>
+          <li><strong>커뮤니케이션:</strong> 고객지원 이메일, 이의신청, 신고 내용</li>
+        </ul>
+        <h3>2.2 자동 수집 정보</h3>
+        <ul>
+          <li><strong>기기 정보:</strong> 운영체제 및 버전, 앱 버전, 장치 토큰(푸시 알림용), 타임존, 로케일</li>
+          <li><strong>이용 정보:</strong> 방문한 페이지, 사용 기능, 세션 시간, 상호작용 타임스탬프</li>
+          <li><strong>충돌 로그:</strong> 안정성 개선을 위한 비식별화 오류 로그</li>
+        </ul>
+        <h3>2.3 선택적 정보 (명시적 동의 필요)</h3>
+        <ul>
+          <li><strong>정밀 위치정보:</strong> '주변 스탠' 기능 활성화 시에만 사용, 서버에 저장되지 않음</li>
+          <li><strong>대략적 위치:</strong> IP주소로 콘텐츠 현지화에 활용, 국가 단위 이하로 저장되지 않음</li>
+          <li><strong>생년월일:</strong> 연령 제한 기능 및 개인화 서비스에 활용</li>
+          <li><strong>마케팅 수신 동의:</strong> 별도의 선택적 동의로 수집</li>
+        </ul>
+        <div class="legal-info">
+          <p>결제 카드 정보는 수집하지 않습니다. 앱 내 구매는 Apple App Store 또는 Google Play를 통해 각 플랫폼의 개인정보 처리방침에 따라 처리됩니다.</p>
+        </div>
+      </article>
+
+      <article id="ko-p3">
+        <h2>3. 개인정보 이용 목적</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>목적</th>
+              <th>처리 근거</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>서비스 제공 및 운영 (계정, 콘텐츠, 팬클럽)</td>
+              <td>계약 이행</td>
+            </tr>
+            <tr>
+              <td>수신 동의한 푸시 알림 발송</td>
+              <td>동의</td>
+            </tr>
+            <tr>
+              <td>비정상 행위, 스팸, 불법 콘텐츠 탐지</td>
+              <td>정당한 이익 / 법적 의무</td>
+            </tr>
+            <tr>
+              <td>고객지원 및 이의 처리</td>
+              <td>계약 이행 / 정당한 이익</td>
+            </tr>
+            <tr>
+              <td>비식별화 진단을 통한 서비스 개선</td>
+              <td>정당한 이익</td>
+            </tr>
+            <tr>
+              <td>법적 의무 이행 (법원 명령 등)</td>
+              <td>법적 의무</td>
+            </tr>
+            <tr>
+              <td>마케팅 커뮤니케이션 발송</td>
+              <td>동의 (별도)</td>
+            </tr>
+            <tr>
+              <td>지역 기반 콘텐츠 개인화</td>
+              <td>정당한 이익</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>자동화된 의사결정 또는 프로파일링에 이용자 정보를 사용하지 않습니다.</p>
+      </article>
+
+      <article id="ko-p4">
+        <h2>4. 보유 및 삭제</h2>
+        <ul>
+          <li><strong>활성 계정:</strong> 계정 활성 기간 동안 보유</li>
+          <li><strong>삭제 요청 후:</strong> 90일간 유예기간 적용. 기간 내 계정 복구 가능. 90일 경과 후 프로덕션 시스템에서 영구 삭제</li>
+          <li><strong>백업:</strong> 프로덕션 삭제 후 30일 이내 순환 백업에서 삭제</li>
+          <li><strong>법적 보존:</strong> 법적 의무 또는 수사 중인 경우, 표준 일정을 초과하여 보유될 수 있음</li>
+          <li><strong>비식별화 통계:</strong> 공개되지 않은 집계 데이터는 무기한 보유 가능</li>
+          <li><strong>고객지원 커뮤니케이션:</strong> 마지막 실제 이후 3년간 보유</li>
+        </ul>
+        <div class="legal-critical">
+          <p><strong>90일 이후 계정 삭제는 영구적입니다.</strong> 삭제 전 데이터 내보내기를 원하시면 privacy@with-stan.com으로 요청하세요.</p>
+        </div>
+      </article>
+
+      <article id="ko-p5">
+        <h2>5. 제3자 제공 및 공유</h2>
+        <p>개인정보를 <strong>판매하지 않습니다.</strong> 다음 경우에만 공유합니다:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>수신자</th>
+              <th>공유 정보</th>
+              <th>목적</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>클라우드 인프라 (AWS 등)</td>
+              <td>모든 사용자 생성 콘텐츠 및 계정 데이터</td>
+              <td>호스팅 및 저장</td>
+            </tr>
+            <tr>
+              <td>푸시 알림 (APNs/FCM)</td>
+              <td>장치 토큰, 알림 콘텐츠</td>
+              <td>알림 전달</td>
+            </tr>
+            <tr>
+              <td>비식별화 분석</td>
+              <td>집계 이용 이벤트, PII 없음</td>
+              <td>앱 성능 분석</td>
+            </tr>
+            <tr>
+              <td>법적 기관</td>
+              <td>법령 또는 법원 명령에 필요한 정보</td>
+              <td>법적 의무 이행</td>
+            </tr>
+            <tr>
+              <td>합병/인수 시 승계 엔티티</td>
+              <td>기밀유지계약 하 전체 데이터셋</td>
+              <td>사업 연속성</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article id="ko-p6">
+        <h2>6. 국외 이전</h2>
+        <p>Dear Us는 대한민국에서 운영됩니다. 구독 데이터는 인프라에 따라 한국, 미국, EU 서버에서 처리될 수 있습니다. EEA/영국 외부 이전은 EU 승인 표준 계약 조항(SCC) 또는 적정성
+          결정에 의해 보호됩니다.</p>
+        <p>한국 이용자: 개인정보 보호법(PIPA)에 따라 처리됩니다.</p>
+      </article>
+
+      <article id="ko-p7">
+        <h2>7. 이용자 권리</h2>
+        <p>관할 지역에 따라 다음 권리를 행사하실 수 있습니다:</p>
+        <ul>
+          <li>개인정보 <strong>열람</strong> (데이터 이동성 내보내기)</li>
+          <li>부정확한 정보 <strong>정정</strong></li>
+          <li>계정 및 연관 데이터 <strong>삭제</strong></li>
+          <li>특정 상황에서 처리 <strong>제한</strong></li>
+          <li>정당한 이익에 기반한 처리에 <strong>거부</strong></li>
+          <li>동의 <strong>철회</strong> (철회 전 처리는 유효)</li>
+          <li>감독 기관에 <strong>불만 제기</strong></li>
+        </ul>
+        <p>privacy@with-stan.com으로 요청 하시면 30일 이내 답변드립니다. 신원 확인이 요청될 수 있습니다.</p>
+        <div class="legal-info">
+          <p><strong>한국 이용자:</strong> 개인정보보호위원회(www.pipc.go.kr)에 권리 침해 신청이 가능합니다.</p>
+        </div>
+      </article>
+
+      <article id="ko-p8">
+        <h2>8. 아동 보호</h2>
+        <p>서비스는 14세 미만(또는 현지법이 요구하는 더 높은 연령) 아동을 대상으로 하지 않습니다. 14세 미만 아동의 개인정보를 수집한 사실을 인지한 경우 즉시 삭제합니다. 의심되는 경우
+          privacy@with-stan.com으로 연락해주세요.</p>
+      </article>
+
+      <article id="ko-p9">
+        <h2>9. 방침 변경</h2>
+        <p>본 방침은 주기적으로 갱신될 수 있습니다. 중요 변경은 시행 7일 전 앱 내 알림 또는 이메일로 안내됩니다. 시행일 이후 서비스를 계속 이용하는 경우 변경된 방침에 동의하는 것으로 간주합니다.
+        </p>
+      </article>
+
+      <article id="ko-p10">
+        <h2>10. 문의 및 요청</h2>
+        <p><strong>일반 문의:</strong> support@with-stan.com</p>
+        <p><strong>개인정보 요청 (열람, 삭제, 이동성):</strong> privacy@with-stan.com</p>
+        <p><strong>답변 기한:</strong> 개인정보 요청 30일, 일반 문의 7 영업일</p>
+        <p>요청 시 닉네임, 가입 이메일, 요청 사항을 함께 제출해주세요. 추가 본인 확인이 요청될 수 있습니다.</p>
+      </article>
+    </main>
+  </div>
+  <div id="doc-es" class="doc-lang hidden">
+    <main>
+      <div class="doc-hdr">
+        <h1>Política de Privacidad</h1>
+        <p class="eff-date">Vigente: 7 de abril de 2026 &bull; Versión 2.5</p>
+        <nav class="toc"><strong>Contenido</strong>
+          <ol>
+            <li><a href="#es-p1">Responsable y Contacto</a></li>
+            <li><a href="#es-p2">Datos que Recopilamos</a></li>
+            <li><a href="#es-p3">Uso de los Datos</a></li>
+            <li><a href="#es-p4">Retención y Eliminación</a></li>
+            <li><a href="#es-p5">Compartir con Terceros</a></li>
+            <li><a href="#es-p6">Transferencias Internacionales</a></li>
+            <li><a href="#es-p7">Tus Derechos</a></li>
+            <li><a href="#es-p8">Privacidad Infantil</a></li>
+            <li><a href="#es-p9">Cambios a esta Política</a></li>
+            <li><a href="#es-p10">Contacto y Solicitudes</a></li>
+          </ol>
+        </nav>
+      </div>
+
+      <article id="es-p1">
+        <h2>1. Responsable del Tratamiento y Contacto</h2>
+        <p><strong>Nombre del servicio:</strong> Dear Us &mdash; operado por WithStan (operador individual, República de
+          Corea).</p>
+        <p><strong>Correo general:</strong> support@with-stan.com &nbsp;|&nbsp; <strong>Privacidad:</strong>
+          privacy@with-stan.com</p>
+        <p>Dear Us es operado por una persona física. La identidad del operador no se divulga públicamente en esta
+          página, pero será revelada a las autoridades competentes cuando lo requiera la ley o una orden judicial.</p>
+      </article>
+
+      <article id="es-p2">
+        <h2>2. Datos que Recopilamos</h2>
+        <h3>2.1 Datos que tú proporcionas</h3>
+        <ul>
+          <li><strong>Datos de cuenta:</strong> nombre de usuario (obligatorio), foto de perfil (opcional), biografía
+            (opcional), idioma preferido.</li>
+          <li><strong>Contenido:</strong> publicaciones, comentarios, me gusta, mensajes de fan clubs, archivos
+            multimedia subidos.</li>
+          <li><strong>Comunicaciones:</strong> correos de soporte, apelaciones, reportes de usuarios.</li>
+        </ul>
+        <h3>2.2 Datos recopilados automáticamente</h3>
+        <ul>
+          <li><strong>Datos del dispositivo:</strong> sistema operativo y versión, versión de la app, token del
+            dispositivo (para notificaciones push), zona horaria, configuración regional.</li>
+          <li><strong>Datos de uso:</strong> páginas visitadas, funciones usadas, duración de la sesión, marcas de
+            tiempo de interacción.</li>
+          <li><strong>Diagnósticos de fallos:</strong> registros de errores anonimizados para mejorar la estabilidad.
+          </li>
+        </ul>
+        <h3>2.3 Datos opcionales (requieren consentimiento explícito)</h3>
+        <ul>
+          <li><strong>Ubicación precisa:</strong> solo cuando activas &ldquo;Stans cercanos&rdquo;; no se almacena en
+            servidores.</li>
+          <li><strong>Ubicación aproximada (región):</strong> derivada de la IP para localización de contenido; no se
+            almacena a nivel subnacional.</li>
+          <li><strong>Fecha de nacimiento:</strong> campo opcional para funciones con restricción de edad y saludos
+            personalizados.</li>
+          <li><strong>Consentimiento de marketing:</strong> recopilado como un consentimiento separado y opcional.</li>
+        </ul>
+        <div class="legal-info">
+          <p>No recopilamos datos de tarjetas de pago. Las compras dentro de la app son procesadas exclusivamente por
+            Apple (App Store) o Google (Google Play) bajo sus respectivas políticas de privacidad.</p>
+        </div>
+      </article>
+
+      <article id="es-p3">
+        <h2>3. Cómo Usamos tus Datos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Finalidad</th>
+              <th>Base legal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Proveer y operar el Servicio (cuenta, contenido, fan clubs)</td>
+              <td>Ejecución del contrato</td>
+            </tr>
+            <tr>
+              <td>Enviar notificaciones push a las que te hayas suscrito</td>
+              <td>Consentimiento</td>
+            </tr>
+            <tr>
+              <td>Detectar y prevenir abuso, spam y contenido ilegal</td>
+              <td>Interés legítimo / Obligación legal</td>
+            </tr>
+            <tr>
+              <td>Responder solicitudes de soporte y apelaciones</td>
+              <td>Ejecución del contrato / Interés legítimo</td>
+            </tr>
+            <tr>
+              <td>Mejorar la estabilidad mediante diagnósticos anonimizados</td>
+              <td>Interés legítimo</td>
+            </tr>
+            <tr>
+              <td>Cumplir obligaciones legales (órdenes judiciales, solicitudes gubernamentales)</td>
+              <td>Obligación legal</td>
+            </tr>
+            <tr>
+              <td>Enviar comunicaciones de marketing (boletines, promociones)</td>
+              <td>Consentimiento (separado)</td>
+            </tr>
+            <tr>
+              <td>Personalizar contenido según tu región</td>
+              <td>Interés legítimo</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>No usamos tus datos para toma de decisiones automatizada o elaboración de perfiles con efectos legales o
+          significativos similares.</p>
+      </article>
+
+      <article id="es-p4">
+        <h2>4. Retención y Eliminación de Datos</h2>
+        <ul>
+          <li><strong>Cuenta activa:</strong> datos retenidos mientras la cuenta esté activa.</li>
+          <li><strong>Tras solicitud de eliminación:</strong> período de gracia de 90 días durante el cual puedes
+            restaurar tu cuenta. Después de 90 días, los datos personales se eliminan permanentemente de los sistemas de
+            producción.</li>
+          <li><strong>Copias de seguridad:</strong> eliminadas de las copias de seguridad rotativas en un plazo de 30
+            días tras la eliminación de producción.</li>
+          <li><strong>Retención legal:</strong> si una obligación legal o investigación en curso lo requiere, los datos
+            pueden retenerse más allá del calendario estándar.</li>
+          <li><strong>Analítica anónima:</strong> los datos de analítica agregados y no identificables pueden retenerse
+            indefinidamente.</li>
+          <li><strong>Comunicaciones de soporte:</strong> retenidas por 3 años desde la última interacción para
+            prevención de abusos.</li>
+        </ul>
+        <div class="legal-critical">
+          <p><strong>La eliminación de cuenta es irreversible después de 90 días.</strong> Puedes solicitar un paquete
+            de exportación de datos antes de la eliminación en privacy@with-stan.com.</p>
+        </div>
+      </article>
+
+      <article id="es-p5">
+        <h2>5. Compartir y Terceros</h2>
+        <p><strong>No vendemos</strong> tus datos personales. Solo los compartimos en los siguientes casos:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Destinatario</th>
+              <th>Datos compartidos</th>
+              <th>Finalidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Proveedor de infraestructura en la nube (AWS u otro)</td>
+              <td>Todo el contenido generado por usuarios y datos de cuenta</td>
+              <td>Alojamiento y almacenamiento</td>
+            </tr>
+            <tr>
+              <td>Servicios de notificaciones push (APNs / FCM)</td>
+              <td>Token del dispositivo, carga de notificación</td>
+              <td>Entrega de notificaciones push</td>
+            </tr>
+            <tr>
+              <td>Proveedor de analítica (anonimizado)</td>
+              <td>Eventos de uso agregados, sin PII</td>
+              <td>Analítica del rendimiento de la app</td>
+            </tr>
+            <tr>
+              <td>Autoridades legales</td>
+              <td>Datos requeridos por ley u orden judicial</td>
+              <td>Cumplimiento legal</td>
+            </tr>
+            <tr>
+              <td>Entidad sucesora en fusión o adquisición</td>
+              <td>Conjunto de datos completo bajo acuerdo de confidencialidad</td>
+              <td>Continuidad del negocio</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article id="es-p6">
+        <h2>6. Transferencias Internacionales de Datos</h2>
+        <p>Dear Us opera desde la República de Corea. Tus datos pueden procesarse en servidores ubicados en Corea del
+          Sur, Estados Unidos o la Unión Europea, según el proveedor de infraestructura. Las transferencias fuera del
+          EEE están protegidas por Cláusulas Contractuales Tipo (CCT) aprobadas por la Comisión Europea o decisiones de
+          adecuación.</p>
+        <p>Usuarios del EEE/Reino Unido: los datos se procesan conforme al RGPD/UK GDPR.</p>
+      </article>
+
+      <article id="es-p7">
+        <h2>7. Tus Derechos</h2>
+        <p>Según tu jurisdicción, puedes tener derecho a:</p>
+        <ul>
+          <li><strong>Acceder</strong> a tus datos personales (exportación de portabilidad de datos).</li>
+          <li><strong>Rectificar</strong> datos inexactos.</li>
+          <li><strong>Eliminar</strong> tu cuenta y datos asociados.</li>
+          <li><strong>Restringir</strong> el tratamiento en determinadas circunstancias.</li>
+          <li><strong>Oponerte</strong> al tratamiento basado en interés legítimo.</li>
+          <li><strong>Retirar el consentimiento</strong> en cualquier momento (no afecta al tratamiento previo).</li>
+          <li><strong>Presentar una reclamación</strong> ante una autoridad de control.</li>
+        </ul>
+        <p>Para ejercer estos derechos, escribe a privacy@with-stan.com. Responderemos en un plazo de 30 días naturales.
+          Puede requerirse verificación de identidad.</p>
+      </article>
+
+      <article id="es-p8">
+        <h2>8. Privacidad Infantil</h2>
+        <p>El Servicio no está dirigido a menores de 14 años (o la edad mínima más alta que exija la ley local). No
+          recopilamos conscientemente datos personales de menores. Si tomamos conocimiento de que se han recopilado
+          datos de un menor de 14 años, los eliminaremos de inmediato. Si crees que un menor se ha registrado, contacta
+          privacy@with-stan.com.</p>
+      </article>
+
+      <article id="es-p9">
+        <h2>9. Cambios a esta Política</h2>
+        <p>Podemos actualizar esta Política de Privacidad periódicamente. Los cambios materiales se comunicarán mediante
+          notificación dentro de la app al menos 7 días antes de que entren en vigor, o por correo electrónico. El uso
+          continuado del Servicio tras la fecha de vigencia constituye la aceptación de la política revisada.</p>
+      </article>
+
+      <article id="es-p10">
+        <h2>10. Contacto y Solicitudes de Datos</h2>
+        <p><strong>Soporte general:</strong> support@with-stan.com</p>
+        <p><strong>Solicitudes de privacidad (acceso, eliminación, portabilidad):</strong> privacy@with-stan.com</p>
+        <p><strong>Tiempo de respuesta:</strong> 30 días naturales para solicitudes de privacidad; 7 días hábiles para
+          soporte general.</p>
+        <p>Las solicitudes deben incluir: tu nombre de usuario, correo registrado y descripción de la solicitud. Podemos
+          solicitar verificación adicional para proteger tu cuenta.</p>
+      </article>
+    </main>
+  </div>
+  <div id="doc-pt" class="doc-lang hidden">
+    <main>
+      <div class="doc-hdr">
+        <h1>Política de Privacidade</h1>
+        <p class="eff-date">Vigência: 7 de abril de 2026 &bull; Versão 2.5</p>
+        <nav class="toc"><strong>Conteúdo</strong>
+          <ol>
+            <li><a href="#pt-p1">Responsável e Contato</a></li>
+            <li><a href="#pt-p2">Dados que Coletamos</a></li>
+            <li><a href="#pt-p3">Como Usamos os Dados</a></li>
+            <li><a href="#pt-p4">Retenção e Exclusão</a></li>
+            <li><a href="#pt-p5">Compartilhamento com Terceiros</a></li>
+            <li><a href="#pt-p6">Transferências Internacionais</a></li>
+            <li><a href="#pt-p7">Seus Direitos</a></li>
+            <li><a href="#pt-p8">Privacidade Infantil</a></li>
+            <li><a href="#pt-p9">Alterações nesta Política</a></li>
+            <li><a href="#pt-p10">Contato e Solicitações</a></li>
+          </ol>
+        </nav>
+      </div>
+
+      <article id="pt-p1">
+        <h2>1. Responsável pelo Tratamento e Contato</h2>
+        <p><strong>Nome do serviço:</strong> Dear Us &mdash; operado por WithStan (operador individual, República da
+          Coreia).</p>
+        <p><strong>E-mail geral:</strong> support@with-stan.com &nbsp;|&nbsp; <strong>Privacidade:</strong>
+          privacy@with-stan.com</p>
+        <p>Dear Us é operado por um indivíduo. A identidade do operador não é divulgada publicamente nesta página, mas
+          será revelada às autoridades competentes quando exigido por lei ou ordem judicial.</p>
+      </article>
+
+      <article id="pt-p2">
+        <h2>2. Dados que Coletamos</h2>
+        <h3>2.1 Dados que você fornece</h3>
+        <ul>
+          <li><strong>Dados da conta:</strong> nome de usuário (obrigatório), foto de perfil (opcional), biografia
+            (opcional), idioma preferido.</li>
+          <li><strong>Conteúdo:</strong> publicações, comentários, curtidas, mensagens de fã-clubes, uploads de mídia.
+          </li>
+          <li><strong>Comunicações:</strong> e-mails de suporte, recursos, denúncias de usuários.</li>
+        </ul>
+        <h3>2.2 Dados coletados automaticamente</h3>
+        <ul>
+          <li><strong>Dados do dispositivo:</strong> sistema operacional e versão, versão do app, token do dispositivo
+            (para notificações push), fuso horário, localidade.</li>
+          <li><strong>Dados de uso:</strong> páginas visitadas, funcionalidades usadas, duração da sessão, carimbos de
+            data/hora de interação.</li>
+          <li><strong>Diagnósticos de falhas:</strong> registros de erros anonimizados para melhorar a estabilidade.
+          </li>
+        </ul>
+        <h3>2.3 Dados opcionais (requerem consentimento explícito)</h3>
+        <ul>
+          <li><strong>Localização precisa:</strong> somente quando você ativa &ldquo;Stans próximos&rdquo;; não
+            armazenada em servidores.</li>
+          <li><strong>Localização aproximada (região):</strong> derivada do IP para localização de conteúdo; não
+            armazenada abaixo do nível nacional.</li>
+          <li><strong>Data de nascimento:</strong> campo opcional para funcionalidades com restrição de idade e
+            saudações personalizadas.</li>
+          <li><strong>Consentimento de marketing:</strong> coletado como um consentimento separado e opcional.</li>
+        </ul>
+        <div class="legal-info">
+          <p>Não coletamos dados de cartões de pagamento. As compras no app são processadas exclusivamente pela Apple
+            (App Store) ou Google (Google Play) sob suas respectivas políticas de privacidade.</p>
+        </div>
+      </article>
+
+      <article id="pt-p3">
+        <h2>3. Como Usamos Seus Dados</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Finalidade</th>
+              <th>Base legal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fornecer e operar o Serviço (conta, conteúdo, fã-clubes)</td>
+              <td>Execução do contrato</td>
+            </tr>
+            <tr>
+              <td>Enviar notificações push que você optou por receber</td>
+              <td>Consentimento</td>
+            </tr>
+            <tr>
+              <td>Detectar e prevenir abuso, spam e conteúdo ilegal</td>
+              <td>Interesse legítimo / Obrigação legal</td>
+            </tr>
+            <tr>
+              <td>Responder solicitações de suporte e recursos</td>
+              <td>Execução do contrato / Interesse legítimo</td>
+            </tr>
+            <tr>
+              <td>Melhorar a estabilidade via diagnósticos anonimizados</td>
+              <td>Interesse legítimo</td>
+            </tr>
+            <tr>
+              <td>Cumprir obrigações legais (ordens judiciais, solicitações governamentais)</td>
+              <td>Obrigação legal</td>
+            </tr>
+            <tr>
+              <td>Enviar comunicações de marketing (newsletters, promoções)</td>
+              <td>Consentimento (separado)</td>
+            </tr>
+            <tr>
+              <td>Personalizar conteúdo para sua região</td>
+              <td>Interesse legítimo</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Não usamos seus dados para tomada de decisão automatizada ou elaboração de perfis com efeitos jurídicos ou
+          significativos similares.</p>
+      </article>
+
+      <article id="pt-p4">
+        <h2>4. Retenção e Exclusão de Dados</h2>
+        <ul>
+          <li><strong>Conta ativa:</strong> dados retidos enquanto sua conta estiver ativa.</li>
+          <li><strong>Após solicitação de exclusão:</strong> período de carência de 90 dias durante o qual você pode
+            restaurar sua conta. Após 90 dias, os dados pessoais são excluídos permanentemente dos sistemas de produção.
+          </li>
+          <li><strong>Backups:</strong> excluídos dos backups rotativos em até 30 dias após a exclusão da produção.</li>
+          <li><strong>Retenção legal:</strong> se uma obrigação legal ou investigação em curso exigir, os dados podem
+            ser retidos além do cronograma padrão.</li>
+          <li><strong>Análise anônima:</strong> dados analíticos agregados e não identificáveis podem ser retidos
+            indefinidamente.</li>
+          <li><strong>Comunicações de suporte:</strong> retidas por 3 anos a partir da última interação para fins de
+            prevenção de abuso.</li>
+        </ul>
+        <div class="legal-critical">
+          <p><strong>A exclusão de conta é irreversível após 90 dias.</strong> Você pode solicitar um pacote de
+            exportação de dados antes da exclusão em privacy@with-stan.com.</p>
+        </div>
+      </article>
+
+      <article id="pt-p5">
+        <h2>5. Compartilhamento com Terceiros</h2>
+        <p><strong>Não vendemos</strong> seus dados pessoais. Compartilhamos apenas nas seguintes circunstâncias:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Destinatário</th>
+              <th>Dados compartilhados</th>
+              <th>Finalidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Provedor de infraestrutura em nuvem (AWS ou equivalente)</td>
+              <td>Todo o conteúdo gerado pelo usuário e dados da conta</td>
+              <td>Hospedagem e armazenamento</td>
+            </tr>
+            <tr>
+              <td>Serviços de notificações push (APNs / FCM)</td>
+              <td>Token do dispositivo, payload da notificação</td>
+              <td>Entrega de notificações push</td>
+            </tr>
+            <tr>
+              <td>Provedor de análise (anonimizado)</td>
+              <td>Eventos de uso agregados, sem PII</td>
+              <td>Análise de desempenho do app</td>
+            </tr>
+            <tr>
+              <td>Autoridades legais</td>
+              <td>Dados exigidos por lei ou ordem judicial</td>
+              <td>Conformidade legal</td>
+            </tr>
+            <tr>
+              <td>Entidade sucessora em fusão ou aquisição</td>
+              <td>Conjunto de dados completo sob acordo de confidencialidade</td>
+              <td>Continuidade dos negócios</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article id="pt-p6">
+        <h2>6. Transferências Internacionais de Dados</h2>
+        <p>Dear Us é operado a partir da República da Coreia. Seus dados podem ser processados em servidores localizados
+          na Coreia do Sul, nos Estados Unidos ou na União Europeia, dependendo do provedor de infraestrutura. As
+          transferências para fora do EEE são protegidas por Cláusulas Contratuais Padrão (CCPs) aprovadas pela Comissão
+          Europeia ou por decisões de adequação.</p>
+        <p>Usuários do EEE/Reino Unido: os dados são processados em conformidade com o RGPD/UK GDPR.</p>
+      </article>
+
+      <article id="pt-p7">
+        <h2>7. Seus Direitos</h2>
+        <p>Dependendo da sua jurisdição, você pode ter o direito de:</p>
+        <ul>
+          <li><strong>Acessar</strong> seus dados pessoais (exportação de portabilidade de dados).</li>
+          <li><strong>Corrigir</strong> dados imprecisos.</li>
+          <li><strong>Excluir</strong> sua conta e dados associados.</li>
+          <li><strong>Restringir</strong> o processamento em determinadas circunstâncias.</li>
+          <li><strong>Opor-se</strong> ao processamento baseado em interesses legítimos.</li>
+          <li><strong>Retirar o consentimento</strong> a qualquer momento (não afeta o processamento anterior).</li>
+          <li><strong>Registrar uma reclamação</strong> perante uma autoridade supervisora.</li>
+        </ul>
+        <p>Para exercer esses direitos, envie um e-mail para privacy@with-stan.com. Responderemos em até 30 dias
+          corridos. A verificação de identidade pode ser necessária.</p>
+      </article>
+
+      <article id="pt-p8">
+        <h2>8. Privacidade Infantil</h2>
+        <p>O Serviço não é direcionado a menores de 14 anos (ou a idade mínima mais alta exigida pela lei local). Não
+          coletamos conscientemente dados pessoais de menores. Se tomarmos conhecimento de que dados de um menor de 14
+          anos foram coletados, os excluiremos prontamente. Se você acredita que um menor se registrou, entre em contato
+          com privacy@with-stan.com imediatamente.</p>
+      </article>
+
+      <article id="pt-p9">
+        <h2>9. Alterações nesta Política</h2>
+        <p>Podemos atualizar esta Política de Privacidade periodicamente. Alterações materiais serão comunicadas por
+          meio de notificação no app pelo menos 7 dias antes de entrarem em vigor ou por e-mail. O uso continuado do
+          Serviço após a data de vigência constitui aceitação da política revisada.</p>
+      </article>
+
+      <article id="pt-p10">
+        <h2>10. Contato e Solicitações de Dados</h2>
+        <p><strong>Suporte geral:</strong> support@with-stan.com</p>
+        <p><strong>Solicitações de privacidade (acesso, exclusão, portabilidade):</strong> privacy@with-stan.com</p>
+        <p><strong>Prazo de resposta:</strong> 30 dias corridos para solicitações de privacidade; 7 dias úteis para
+          suporte geral.</p>
+        <p>As solicitações devem incluir: seu nome de usuário, e-mail cadastrado e uma descrição do seu pedido. Podemos
+          solicitar verificação adicional para proteger sua conta.</p>
+      </article>
+    </main>
+  </div>
+  <footer id="page-footer">
+    <div class="fi">
+      <h3>WithStan</h3>
+      <dl class="fg">
+        <dt>대표 / Representative</dt>
+        <dd>현승환 (Hyun Seunghwan)</dd>
+        <dt>주소 / Address</dt>
+        <dd>서울특별시 강북구 노해로 23길 123, 5층 503호<br>503, 5F, 23-gil 123 Nohae-ro, Gangbuk-gu, Seoul, Republic of Korea</dd>
+        <dt>DPO / 위치정보관리체임자</dt>
+        <dd>Kim Minjeong &middot; dev@with-stan.com</dd>
+        <dt>개인정보 문의 / Privacy</dt>
+        <dd>privacy@with-stan.com</dd>
+        <dt>고객지원 / Support</dt>
+        <dd>support@with-stan.com</dd>
+      </dl>
+      <div class="vh">Version History: v1.0 &rarr; v1.1 &rarr; v2.1 (withdrawn) &rarr; v2.2 (Definitive) &rarr; v2.5
+        (current)</div>
+    </div>
+  </footer>
+  <script>(function () {
+      var p = new URLSearchParams(location.search), lang = p.get('lang') || 'ko',
+        sup = ['ko', 'en', 'es', 'pt'], al = sup.includes(lang) ? lang : 'en', embed = p.get('embed') === 'true';
+      if (embed) document.body.classList.add('embed-mode');
+      document.querySelectorAll('.doc-lang').forEach(function (e) { e.classList.add('hidden') });
+      var d = document.getElementById('doc-' + al); if (d) d.classList.remove('hidden');
+      if (al !== 'en' && al !== 'ko') { var b = document.getElementById('tr-banner'); if (b) b.classList.remove('hidden'); }
+      document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === al) });
+      document.documentElement.lang = al;
+      var ml = document.getElementById('meta-lang'); if (ml) ml.setAttribute('content', al);
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault(); var nl = this.dataset.lang;
+          var np = new URLSearchParams(location.search); np.set('lang', nl);
+          if (embed) np.set('embed', 'true');
+          history.pushState({}, '', '?' + np.toString());
+          document.querySelectorAll('.doc-lang').forEach(function (e) { e.classList.add('hidden') });
+          var nd = document.getElementById('doc-' + nl); if (nd) nd.classList.remove('hidden');
+          var bn = document.getElementById('tr-banner');
+          if (bn) { if (nl !== 'en' && nl !== 'ko') bn.classList.remove('hidden'); else bn.classList.add('hidden'); }
+          document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.toggle('active', b.dataset.lang === nl) });
+          document.documentElement.lang = nl; if (ml) ml.setAttribute('content', nl);
+        });
+      });
+    })();</script>
+</body>
+
+</html>
