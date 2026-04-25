@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.withstan.dearus",
+      "sha256_cert_fingerprints": [
+        "9F:2E:24:7C:A1:FC:68:43:22:39:89:3F:CA:74:7A:6E:81:A5:C6:67:9B:F5:2C:2D:2A:24:52:93:12:C8:0D:D2"
+      ]
+    }
+  }
+]
