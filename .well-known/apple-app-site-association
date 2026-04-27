@@ -4,8 +4,22 @@
     "details": [
       {
         "appID": "QR5Q3J55M4.com.withstan.dearus",
-        "paths": ["/dearus/invite", "/dearus/invite/*"]
+        "paths": [
+          "/dearus/invite",
+          "/dearus/invite/*",
+          "/dearus/*"
+        ]
       }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": [
+      "QR5Q3J55M4.com.withstan.dearus"
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "QR5Q3J55M4.com.withstan.dearus"
     ]
   }
 }
