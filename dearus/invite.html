@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DearUs 초대</title>
+  <title>Connect on DearUs</title>
   <style>
     body {
       font-family: sans-serif;
@@ -51,11 +51,48 @@
 </head>
 
 <body>
-  <h1>DearUs에서 연결하기</h1>
-  <p>앱을 설치하고 파트너의 초대를 수락하세요.</p>
-  <a class="btn ios" href="https://apps.apple.com/app/id6760184777">App Store에서 받기</a>
-  <a class="btn android"
-    href="https://play.google.com/store/apps/details?id=com.withstan.dearus&listing=invite-code">Google Play에서 받기</a>
+  <h1 id="title"></h1>
+  <p id="desc"></p>
+  <a class="btn ios" id="btn-ios" href="https://apps.apple.com/app/id6760184777"></a>
+  <a class="btn android" id="btn-android"
+    href="https://play.google.com/store/apps/details?id=com.withstan.dearus&listing=invite-code"></a>
+
+  <script>
+    const i18n = {
+      ko: {
+        title: 'DearUs에서 연결하기',
+        desc: '앱을 설치하고 파트너의 초대를 수락하세요.',
+        ios: 'App Store에서 받기',
+        android: 'Google Play에서 받기',
+      },
+      en: {
+        title: 'Connect on DearUs',
+        desc: 'Install the app and accept your partner\'s invitation.',
+        ios: 'Get it on App Store',
+        android: 'Get it on Google Play',
+      },
+      es: {
+        title: 'Conéctate en DearUs',
+        desc: 'Instala la app y acepta la invitación de tu pareja.',
+        ios: 'Descargar en App Store',
+        android: 'Descargar en Google Play',
+      },
+      pt: {
+        title: 'Conecte-se no DearUs',
+        desc: 'Instale o app e aceite o convite do seu parceiro.',
+        ios: 'Baixar na App Store',
+        android: 'Baixar no Google Play',
+      },
+    };
+
+    const lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
+    const t = i18n[lang] || i18n.en;
+
+    document.getElementById('title').textContent = t.title;
+    document.getElementById('desc').textContent = t.desc;
+    document.getElementById('btn-ios').textContent = t.ios;
+    document.getElementById('btn-android').textContent = t.android;
+  </script>
 </body>
 
 </html>
