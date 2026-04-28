@@ -6,92 +6,219 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connect on DearUs</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      margin: 0;
-      background: #fefcf8;
+      background: linear-gradient(160deg, #ffffff 0%, #ffe0e6 60%, #ffc2d1 100%);
     }
 
-    h1 {
-      font-size: 1.5rem;
-      color: #333;
+    .card {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 32px;
+      padding: 52px 44px 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 380px;
+      width: calc(100% - 40px);
+      box-shadow: 0 20px 60px rgba(232, 53, 111, 0.12), 0 4px 20px rgba(0, 0, 0, 0.06);
     }
 
-    p {
-      color: #666;
+    .logo-wrap {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(232, 53, 111, 0.2);
+      margin-bottom: 22px;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .app-name {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #FF6B9D;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      color: #8a7f78;
       text-align: center;
-      margin: 0.5rem 1rem 2rem;
+      line-height: 1.55;
+      margin-bottom: 36px;
     }
 
-    .btn {
-      display: block;
-      padding: 14px 32px;
-      border-radius: 12px;
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .store-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      padding: 15px 24px;
+      border-radius: 16px;
       text-decoration: none;
-      font-weight: bold;
-      margin: 8px;
-      text-align: center;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      width: 100%;
     }
 
-    .ios {
+    .store-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .store-btn:active {
+      transform: translateY(0px);
+    }
+
+    .store-btn .btn-icon {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .store-btn .btn-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.2;
+    }
+
+    .store-btn .btn-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      opacity: 0.85;
+      letter-spacing: 0.2px;
+    }
+
+    .store-btn .btn-store {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+    }
+
+    .btn-ios {
       background: #000;
       color: #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
     }
 
-    .android {
-      background: #01875f;
-      color: #fff;
+    .btn-ios:hover {
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-android {
+      background: #fff;
+      color: #1a1a1a;
+      border: 1.5px solid #e8e0db;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    }
+
+    .btn-android:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
   </style>
 </head>
 
 <body>
-  <h1 id="title"></h1>
-  <p id="desc"></p>
-  <a class="btn ios" id="btn-ios" href="https://apps.apple.com/app/id6760184777"></a>
-  <a class="btn android" id="btn-android"
-    href="https://play.google.com/store/apps/details?id=com.withstan.dearus&listing=invite-code"></a>
+  <div class="card">
+    <div class="logo-wrap">
+      <img src="/images/dearus/icon.png" alt="Dear Us logo" />
+    </div>
+    <h1 class="app-name">Dear Us</h1>
+    <p class="tagline" id="tagline"></p>
+
+    <div class="btn-group">
+      <a class="store-btn btn-ios" id="btn-ios" href="https://apps.apple.com/us/app/dear-us-couples-diary/id6760184777">
+        <span class="btn-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.37 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11" />
+          </svg>
+        </span>
+        <span class="btn-text">
+          <span class="btn-label" id="ios-label"></span>
+          <span class="btn-store">App Store</span>
+        </span>
+      </a>
+
+      <a class="store-btn btn-android" id="btn-android"
+        href="https://play.google.com/store/apps/details?id=com.withstan.dearus&listing=invite-code">
+        <span class="btn-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.18 23.76c.33.18.7.22 1.06.11l.07-.05 10.05-5.8-2.17-2.17z" fill="#EA4335" />
+            <path d="M20.07 10.56 17.33 9l-2.43 2.17 2.44 2.44 2.73-1.58a1.45 1.45 0 0 0 0-2.51z" fill="#FBBC04" />
+            <path d="M3.24.34a1.45 1.45 0 0 0-.5 1.12v21.08c0 .44.18.84.5 1.12l.06.05 11.8-11.8v-.28z" fill="#4285F4" />
+            <path d="M15.16 12.17 4.93 22.4l.06.05c.36.11.73.07 1.06-.11l12.34-7.12z" fill="#34A853" />
+          </svg>
+        </span>
+        <span class="btn-text">
+          <span class="btn-label" id="android-label"></span>
+          <span class="btn-store">Google Play</span>
+        </span>
+      </a>
+    </div>
+  </div>
 
   <script>
     const i18n = {
       ko: {
-        title: 'DearUs에서 연결하기',
+        tagline: 'DearUs에서 연결하기',
         desc: '앱을 설치하고 파트너의 초대를 수락하세요.',
-        ios: 'App Store에서 받기',
-        android: 'Google Play에서 받기',
+        iosLabel: 'App Store에서 받기',
+        androidLabel: 'Google Play에서 받기',
       },
       en: {
-        title: 'Connect on DearUs',
+        tagline: 'Connect on DearUs',
         desc: 'Install the app and accept your partner\'s invitation.',
-        ios: 'Get it on App Store',
-        android: 'Get it on Google Play',
+        iosLabel: 'Get it on App Store',
+        androidLabel: 'Get it on Google Play',
       },
       es: {
-        title: 'Conéctate en DearUs',
+        tagline: 'Conéctate en DearUs',
         desc: 'Instala la app y acepta la invitación de tu pareja.',
-        ios: 'Descargar en App Store',
-        android: 'Descargar en Google Play',
+        iosLabel: 'Descargar en App Store',
+        androidLabel: 'Descargar en Google Play',
       },
       pt: {
-        title: 'Conecte-se no DearUs',
+        tagline: 'Conecte-se no DearUs',
         desc: 'Instale o app e aceite o convite do seu parceiro.',
-        ios: 'Baixar na App Store',
-        android: 'Baixar no Google Play',
+        iosLabel: 'Baixar na App Store',
+        androidLabel: 'Baixar no Google Play',
       },
     };
 
     const lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
     const t = i18n[lang] || i18n.en;
 
-    document.getElementById('title').textContent = t.title;
+    document.getElementById('tagline').textContent = t.tagline;
     document.getElementById('desc').textContent = t.desc;
-    document.getElementById('btn-ios').textContent = t.ios;
-    document.getElementById('btn-android').textContent = t.android;
+    document.getElementById('ios-label').textContent = t.iosLabel;
+    document.getElementById('android-label').textContent = t.androidLabel;
   </script>
 </body>
 
