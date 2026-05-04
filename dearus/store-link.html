@@ -226,11 +226,11 @@
     document.getElementById('android-label').textContent = t.androidLabel;
 
     document.getElementById('btn-ios').addEventListener('click', function () {
-      gtag('event', 'store_click', { store: 'app_store', language: lang });
+      gtag('event', 'store_click', { 'store': 'app_store', 'lang': lang });
     });
 
     document.getElementById('btn-android').addEventListener('click', function () {
-      gtag('event', 'store_click', { store: 'google_play', language: lang });
+      gtag('event', 'store_click', { 'store': 'google_play', 'lang': lang });
     });
   </script>
 </body>
