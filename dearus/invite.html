@@ -193,7 +193,7 @@
         </span>
       </a>
 
-      <a class="store-btn btn-app" id="btn-app" href="dearus://">
+      <a class="store-btn btn-app" id="btn-app" href="dear-us://">
         <span class="btn-icon">
           <img src="/images/dearus/logo_white.png" alt="Dear Us logo" width="26" height="26" />
         </span>
@@ -210,7 +210,7 @@
     const code = new URLSearchParams(window.location.search).get('code');
     console.log('code:', code);
     if (code) {
-      document.getElementById('btn-app').href = `dearus://invite?code=${encodeURIComponent(code)}`;
+      document.getElementById('btn-app').href = `dear-us://invite?code=${encodeURIComponent(code)}`;
     }
     const i18n = {
       ko: {
