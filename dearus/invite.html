@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connect on DearUs</title>
+  <link rel="icon" href="/images/dearus/favicon.png" />
   <style>
     * {
       margin: 0;
@@ -139,7 +140,17 @@
     }
 
     .btn-android:hover {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-app {
+      background: #FF6B9D;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    }
+
+    .btn-app:hover {
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
     }
   </style>
 </head>
@@ -181,44 +192,65 @@
           <span class="btn-store">Google Play</span>
         </span>
       </a>
+
+      <a class="store-btn btn-app" id="btn-app" href="dearus://">
+        <span class="btn-icon">
+          <img src="/images/dearus/logo_white.png" alt="Dear Us logo" width="26" height="26" />
+        </span>
+        <span class="btn-text">
+          <span class="btn-label" id="app-label"></span>
+          <span class="btn-store">DearUs App</span>
+        </span>
+      </a>
     </div>
   </div>
 
   <script>
+
+    const code = new URLSearchParams(window.location.search).get('code');
+    console.log('code:', code);
+    if (code) {
+      document.getElementById('btn-app').href = `dearus://invite?code=${encodeURIComponent(code)}`;
+    }
     const i18n = {
       ko: {
         tagline: 'DearUs에서 연결하기',
         desc: '앱을 설치하고 파트너의 초대를 수락하세요.',
         iosLabel: 'App Store에서 받기',
         androidLabel: 'Google Play에서 받기',
+        appLabel: '앱에서 열기',
       },
       en: {
         tagline: 'Connect on DearUs',
         desc: 'Install the app and accept your partner\'s invitation.',
         iosLabel: 'Get it on App Store',
         androidLabel: 'Get it on Google Play',
+        appLabel: 'Open App',
       },
       es: {
         tagline: 'Conéctate en DearUs',
         desc: 'Instala la app y acepta la invitación de tu pareja.',
         iosLabel: 'Descargar en App Store',
         androidLabel: 'Descargar en Google Play',
+        appLabel: 'Abrir la app',
       },
       pt: {
         tagline: 'Conecte-se no DearUs',
         desc: 'Instale o app e aceite o convite do seu parceiro.',
         iosLabel: 'Baixar na App Store',
         androidLabel: 'Baixar no Google Play',
+        appLabel: 'Abrir a app',
       },
     };
 
     const lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
     const t = i18n[lang] || i18n.en;
 
-    document.getElementById('tagline').textContent = t.tagline;
-    document.getElementById('desc').textContent = t.desc;
+    document.getElementById('tagline').textContent = t.desc;
     document.getElementById('ios-label').textContent = t.iosLabel;
     document.getElementById('android-label').textContent = t.androidLabel;
+    document.getElementById('app-label').textContent = t.appLabel;
+
   </script>
 </body>
 
