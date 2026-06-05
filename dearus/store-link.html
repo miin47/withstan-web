@@ -29,6 +29,7 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      padding: 40px 0;
       background: linear-gradient(160deg, #ffffff 0%, #ffe0e6 60%, #ffc2d1 100%);
     }
 
@@ -38,7 +39,7 @@
       -webkit-backdrop-filter: blur(18px);
       border: 1px solid rgba(255, 255, 255, 0.9);
       border-radius: 32px;
-      padding: 52px 44px 48px;
+      padding: 32px 28px 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -47,37 +48,115 @@
       box-shadow: 0 20px 60px rgba(232, 53, 111, 0.12), 0 4px 20px rgba(0, 0, 0, 0.06);
     }
 
-    .logo-wrap {
-      width: 96px;
-      height: 96px;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(232, 53, 111, 0.2);
-      margin-bottom: 22px;
-    }
-
-    .logo-wrap img {
+    /* ===== Carousel ===== */
+    .carousel-wrap {
+      position: relative;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
 
-    .app-name {
-      font-size: 1.75rem;
-      font-weight: 700;
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.9);
       color: #FF6B9D;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(232, 53, 111, 0.18);
+      transition: transform 0.18s ease, opacity 0.18s ease;
+      z-index: 2;
     }
 
-    .tagline {
-      font-size: 0.9rem;
-      color: #8a7f78;
+    .arrow:hover {
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    .arrow:active {
+      transform: translateY(-50%) scale(0.96);
+    }
+
+    .arrow.prev {
+      left: -6px;
+    }
+
+    .arrow.next {
+      right: -6px;
+    }
+
+    .carousel {
+      display: flex;
+      width: 100%;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      scroll-snap-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      line-height: 1.55;
-      margin-bottom: 36px;
+      padding: 0 2px;
     }
 
+    .slide img {
+      width: 100%;
+      max-width: 170px;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 28px rgba(232, 53, 111, 0.16);
+    }
+
+    .slide h3 {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #4a3f3a;
+      line-height: 1.4;
+    }
+
+    .slide h3 b {
+      color: #FF6B9D;
+    }
+
+    /* ===== Dots ===== */
+    .dots {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin: 18px 0 22px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #f3c8d5;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: width 0.25s ease, background 0.25s ease;
+    }
+
+    .dot.active {
+      width: 22px;
+      border-radius: 4px;
+      background: #FF6B9D;
+    }
+
+    /* ===== Store buttons ===== */
     .btn-group {
       display: flex;
       flex-direction: column;
@@ -156,12 +235,25 @@
 
 <body>
   <div class="card">
-    <div class="logo-wrap">
-      <img src="/images/dearus/icon.png" alt="Dear Us logo" />
+    <!-- 앱 소개 캐러셀 -->
+    <div class="carousel-wrap">
+      <button class="arrow prev" id="arrow-prev" aria-label="previous">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="carousel" id="carousel"></div>
+      <button class="arrow next" id="arrow-next" aria-label="next">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
     </div>
-    <h1 class="app-name">Dear Us</h1>
-    <p class="tagline" id="tagline"></p>
+    <div class="dots" id="dots"></div>
 
+    <!-- 스토어 버튼 (슬라이드와 무관하게 항상 고정) -->
     <div class="btn-group">
       <a class="store-btn btn-ios" id="btn-ios"
         href="https://apps.apple.com/app/id6760184777?ppid=0a1c4f5c-1b52-470f-9f16-941fbe8565ff">
@@ -198,33 +290,156 @@
   <script>
     const i18n = {
       ko: {
-        tagline: '추억을 더 쉽게, 우리 둘만의 공간에',
         iosLabel: 'App Store에서 다운로드',
         androidLabel: 'Google Play에서 다운로드',
+        features: [
+          {
+            title: '우리의 데이트가<br /><b>영원한 추억의 캘린더로</b>',
+            desc: '사진, 감정, 함께한 일정과 지출까지<br />그날의 추억을 기록하고 매일 펼쳐보세요.',
+          },
+          {
+            title: '나 혼자만의<br /><b>감정을 적는 비밀 일기장</b>',
+            desc: '순간이 지나가기 전에 당신의 솔직한 감정과 소소한 디테일들을<br />프라이빗한 공간에 기록해보세요.',
+          },
+          {
+            title: '서로를<br /><b>더 깊이 알아가는 시간</b>',
+            desc: '매일 달라지는 심층 질문, 밸런스게임으로<br />설레는 대화를 시작하세요.',
+          },
+          {
+            title: '데이트가 끝나도<br /><b>걱정 없는 안심 귀가</b>',
+            desc: '집까지 서로의 안전을 다정하게 챙겨주세요.<br />마지막 귀가까지 함께 해요.',
+          },
+        ],
       },
       en: {
-        tagline: 'Record your today, together',
         iosLabel: 'Download on the',
         androidLabel: 'Get it on',
+        features: [
+          {
+            title: 'Your dates become<br /><b>a calendar of timeless memories</b>',
+            desc: 'Photos, feelings, shared plans and expenses —<br />record each day and revisit it whenever you like.',
+          },
+          {
+            title: 'A private diary<br /><b>for your own honest feelings</b>',
+            desc: 'Before the moment slips away, write down your true emotions<br />and the little details in a space just for you.',
+          },
+          {
+            title: 'Time to know<br /><b>each other more deeply</b>',
+            desc: 'Daily questions and balance games<br />spark conversations that bring you closer.',
+          },
+          {
+            title: 'Even after the date ends,<br /><b>a worry-free trip home</b>',
+            desc: "Look after each other's safety all the way home.<br />Stay together until you're both safely back.",
+          },
+        ],
       },
       es: {
-        tagline: 'Guarden sus recuerdos, solo para ustedes',
         iosLabel: 'Descargar en',
         androidLabel: 'Descargar en',
+        features: [
+          {
+            title: 'Vuestras citas se convierten<br /><b>en un calendario de recuerdos eternos</b>',
+            desc: 'Fotos, emociones, planes y gastos compartidos:<br />guardad cada día y revividlo cuando queráis.',
+          },
+          {
+            title: 'Un diario privado<br /><b>para tus emociones más sinceras</b>',
+            desc: 'Antes de que el momento se escape, anota tus sentimientos reales<br />y los pequeños detalles en un espacio solo tuyo.',
+          },
+          {
+            title: 'Tiempo para conoceros<br /><b>mucho más a fondo</b>',
+            desc: 'Preguntas diarias y juegos de balance<br />para empezar conversaciones llenas de emoción.',
+          },
+          {
+            title: 'Incluso al terminar la cita,<br /><b>un regreso a casa sin preocupaciones</b>',
+            desc: 'Cuidad de la seguridad del otro hasta llegar a casa.<br />Estad juntos hasta el último paso.',
+          },
+        ],
       },
       pt: {
-        tagline: 'Registre o seu hoje, juntos',
         iosLabel: 'Baixar na',
         androidLabel: 'Baixar no',
+        features: [
+          {
+            title: 'Os seus encontros viram<br /><b>um calendário de memórias eternas</b>',
+            desc: 'Fotos, emoções, planos e despesas compartilhadas —<br />registre cada dia e relembre quando quiser.',
+          },
+          {
+            title: 'Um diário privado<br /><b>para os seus sentimentos mais sinceros</b>',
+            desc: 'Antes que o momento passe, registre suas emoções verdadeiras<br />e os pequenos detalhes num espaço só seu.',
+          },
+          {
+            title: 'Hora de se conhecerem<br /><b>muito mais a fundo</b>',
+            desc: 'Perguntas diárias e jogos de balanço<br />para começar conversas cheias de emoção.',
+          },
+          {
+            title: 'Mesmo após o encontro,<br /><b>um retorno seguro para casa</b>',
+            desc: 'Cuidem da segurança um do outro até chegar em casa.<br />Fiquem juntos até o último passo.',
+          },
+        ],
       },
     };
 
     const lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
     const t = i18n[lang] || i18n.en;
+    const imgLang = i18n[lang] ? lang : 'en';
 
-    document.getElementById('tagline').textContent = t.tagline;
     document.getElementById('ios-label').textContent = t.iosLabel;
     document.getElementById('android-label').textContent = t.androidLabel;
+
+    // 슬라이드 렌더링
+    const carousel = document.getElementById('carousel');
+    carousel.innerHTML = t.features.map(function (f, i) {
+      return '<div class="slide">' +
+        '<img src="/images/dearus/' + imgLang + '/appimage' + (i + 1) + '.png" alt="Dear Us" loading="lazy" />' +
+        '<h3>' + f.title + '</h3>' +
+        '</div>';
+    }).join('');
+
+    // 도트 렌더링
+    const dotsWrap = document.getElementById('dots');
+    dotsWrap.innerHTML = t.features.map(function (_, i) {
+      return '<button class="dot' + (i === 0 ? ' active' : '') + '" data-index="' + i + '" aria-label="slide ' + (i + 1) + '"></button>';
+    }).join('');
+    const dots = Array.prototype.slice.call(dotsWrap.children);
+
+    // 도트 클릭 → 해당 슬라이드로 이동
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        const i = Number(dot.dataset.index);
+        carousel.scrollTo({ left: carousel.clientWidth * i, behavior: 'smooth' });
+      });
+    });
+
+    // 현재 슬라이드 인덱스
+    function currentIndex() {
+      return Math.round(carousel.scrollLeft / carousel.clientWidth);
+    }
+
+    function goTo(i) {
+      const max = t.features.length - 1;
+      const target = Math.max(0, Math.min(max, i));
+      carousel.scrollTo({ left: carousel.clientWidth * target, behavior: 'smooth' });
+    }
+
+    // 좌우 화살표
+    document.getElementById('arrow-prev').addEventListener('click', function () {
+      goTo(currentIndex() - 1);
+    });
+    document.getElementById('arrow-next').addEventListener('click', function () {
+      goTo(currentIndex() + 1);
+    });
+
+    // 스크롤 위치에 따라 활성 도트 갱신
+    let scrollTimer = null;
+    carousel.addEventListener('scroll', function () {
+      if (scrollTimer) cancelAnimationFrame(scrollTimer);
+      scrollTimer = requestAnimationFrame(function () {
+        const idx = currentIndex();
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle('active', i === idx);
+        });
+      });
+    });
 
     document.getElementById('btn-ios').addEventListener('click', function () {
       gtag('event', 'store_click', { 'store': 'app_store', 'lang': lang });
