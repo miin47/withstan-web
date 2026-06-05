@@ -3,7 +3,10 @@
     "apps": [],
     "details": [
       {
-        "appID": "QR5Q3J55M4.com.withstan.dearus",
+        "appID": [
+          "QR5Q3J55M4.com.withstan.dearus",
+          "QR5Q3J55M4.com.withstan.dearus.dev"
+        ],
         "paths": [
           "/dearus/invite",
           "/dearus/invite/*",
